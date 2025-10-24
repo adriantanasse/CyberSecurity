@@ -2,7 +2,8 @@
 
 **Author:** Adrian Tanase
 **Date:** 2025-10-25  
-**Environment:** Local lab (Ubuntu 20.04 target VM at 192.168.56.20 — NAT/host-only).  
+
+**Environment:** Local lab (MacOSx target VM at 192.168.178.21 — NAT/host-only).  
 **Tools used:** tcpdump, Wireshark, tshark, Splunk Free, triage-script.sh
 
 ---
