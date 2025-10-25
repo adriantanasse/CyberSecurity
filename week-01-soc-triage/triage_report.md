@@ -25,8 +25,8 @@ At 2025-10-25 20:33:12 UTC, the test target observed a burst of failed SSH authe
 ## Attacker
     Mac:sec-porto adriantanase$ TARGET=10.0.0.5; for i in {1..25}; do ssh -o ConnectTimeout=2 -o BatchMode=yes invaliduser@"$TARGET" 'echo hello' 2>/dev/null || true; done
 
-<img width="752" height="304" alt="Group 1 (1)" src="https://github.com/user-attachments/assets/8d62e532-e771-4f25-a06d-0bde80fbe261" />
 
+<img width="796" height="471" alt="Group 3" src="https://github.com/user-attachments/assets/9a972a23-596d-408a-9069-bc372351810c" />
 
 (If **pentest-user** will cause SSH to hang waiting for a password, add -o BatchMode=yes so ssh fails fast instead of prompting)
 
