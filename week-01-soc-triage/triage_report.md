@@ -14,7 +14,7 @@ At 2025-10-25 14:32:12 UTC, the test target observed a burst of failed SSH authe
 ## Attacker
 Mac:sec-porto adriantanase$ TARGET=10.0.0.5; for i in {1..25}; do ssh -o ConnectTimeout=2 -o BatchMode=yes invaliduser@"$TARGET" 'echo hello' 2>/dev/null || true; done
 
-(If invaliduser will cause SSH to hang waiting for a password, add -o BatchMode=yes so ssh fails fast instead of prompting)
+(If **pentest-user** will cause SSH to hang waiting for a password, add -o BatchMode=yes so ssh fails fast instead of prompting)
 
 sudo tail -n 200 /var/log/auth.log
 
