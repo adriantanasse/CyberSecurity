@@ -30,11 +30,21 @@ At 2025-10-25 20:33:12 UTC, the test target observed a burst of failed SSH authe
 
 (If **pentest-user** will cause SSH to hang waiting for a password, add -o BatchMode=yes so ssh fails fast instead of prompting)
 
-    sudo tail -n 200 /var/log/auth.log
+# show all auth events for that IP (newest last)
+    sudo tail -n 50 /var/log/auth.log
     sudo grep "Failed password" /var/log/auth.log | tail -n 50
+    sudo grep "10.0.0.1" /var/log/auth.log -n | tail -n 50
+# specifically show accepted logins from that IP
+    sudo grep "Accepted" /var/log/auth.log | grep "10.0.0.1" -n
 
+# count failed password attempts from that IP
+    sudo grep "Failed password" /var/log/auth.log | grep "10.0.0.1" | wc -l
 
-<img width="796" height="471" alt="Group 3" src="https://github.com/user-attachments/assets/19aefe41-8c9a-44a5-8118-241f90618106" />
+# who is/was logged in around that time
+    who; sudo ss -tnp | grep ':22'
+
+<img width="766" height="467" alt="Group 5" src="https://github.com/user-attachments/assets/eb632051-b49c-4d29-8cb8-969ecbb07f04" />
+
 
 
 ## Evidence (sanitized excerpts)
