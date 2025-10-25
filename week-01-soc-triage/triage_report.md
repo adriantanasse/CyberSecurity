@@ -13,12 +13,15 @@ At 2025-10-25 20:33:12 UTC, the test target observed a burst of failed SSH authe
 
 ## Attacker
 Mac:sec-porto adriantanase$ TARGET=10.0.0.5; for i in {1..25}; do ssh -o ConnectTimeout=2 -o BatchMode=yes invaliduser@"$TARGET" 'echo hello' 2>/dev/null || true; done
+
+
 <img width="512" height="207" alt="Group 1 (1)" src="https://github.com/user-attachments/assets/1dcba541-4dd7-40f1-bb85-881c6562d175" />
 
 (If **pentest-user** will cause SSH to hang waiting for a password, add -o BatchMode=yes so ssh fails fast instead of prompting)
 
 sudo tail -n 200 /var/log/auth.log
 sudo grep "Failed password" /var/log/auth.log | tail -n 50
+
 
 <img width="796" height="471" alt="Group 3" src="https://github.com/user-attachments/assets/19aefe41-8c9a-44a5-8118-241f90618106" />
 
