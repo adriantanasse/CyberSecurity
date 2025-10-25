@@ -3,43 +3,42 @@
 **Author:** Adrian Tanase
 **Date:** 2025-10-25  
 
-**Environment:** Local lab (MacOSx target VM at 192.168.178.21 — NAT/host-only).  
+**Environment:** Local lab (MacOSx target VM (Vagrant) at `10.0.0.5` — NAT/host-only).  
 **Tools used:** tcpdump, Wireshark, tshark, Splunk Free, triage-script.sh
 
 ---
 
 ## Summary
-At 2025-10-25 14:32:12 UTC, the test target observed a burst of failed SSH authentication attempts from a remote host. Network captures show repeated TCP connections to port 22. Host logs contain repeated `Failed password` events. No successful authentication observed.
+At 2025-10-25 20:33:12 UTC, the test target observed a burst of failed SSH authentication attempts from a remote host. Network captures show repeated TCP connections to port 22. Host logs contain repeated `Failed password` events. No successful authentication observed.
 
 ## Attacker
 Mac:sec-porto adriantanase$ TARGET=10.0.0.5; for i in {1..25}; do ssh -o ConnectTimeout=2 -o BatchMode=yes invaliduser@"$TARGET" 'echo hello' 2>/dev/null || true; done
+<img width="512" height="207" alt="Group 1 (1)" src="https://github.com/user-attachments/assets/1dcba541-4dd7-40f1-bb85-881c6562d175" />
 
 (If **pentest-user** will cause SSH to hang waiting for a password, add -o BatchMode=yes so ssh fails fast instead of prompting)
 
 sudo tail -n 200 /var/log/auth.log
-
-<img width="853" height="434" alt="Screenshot 2025-10-25 at 6 01 33 PM" src="https://github.com/user-attachments/assets/81882406-0efc-4a53-97b3-08fd58262912" />
-
 sudo grep "Failed password" /var/log/auth.log | tail -n 50
+
+<img width="796" height="471" alt="Group 3" src="https://github.com/user-attachments/assets/19aefe41-8c9a-44a5-8118-241f90618106" />
+
 
 ## Evidence (sanitized excerpts)
 **/var/log/auth.log** (excerpt, IPs anonymized):
->Oct 24 23:56:37 vultr sshd[49572]: Failed password for root from 10.0.0.5 port 45888 ssh2
->Oct 25 00:13:45 vultr sshd[49936]: Failed password for root from 10.0.0.5 port 12582 ssh2
->Oct 25 00:13:47 vultr sshd[49936]: Failed password for root from 10.0.0.5 port 12582 ssh2
->Oct 25 00:13:49 vultr sshd[49936]: Failed password for root from 10.0.0.5 port 12582 ssh2
->Oct 25 00:13:54 vultr sshd[49938]: Failed password for root from 10.0.0.5 port 64398 ssh2
->Oct 25 00:13:56 vultr sshd[49938]: Failed password for root from 10.0.0.5 port 64398 ssh2
->Oct 25 00:13:59 vultr sshd[49938]: Failed password for root from 10.0.0.5 port 64398 ssh2
->Oct 25 00:14:02 vultr sshd[49940]: Failed password for root from 10.0.0.5 port 57368 ssh2
->Oct 25 00:14:06 vultr sshd[49940]: Failed password for root from 10.0.0.5 port 57368 ssh2
->Oct 25 00:14:09 vultr sshd[49940]: Failed password for root from 10.0.0.5 port 57368 ssh2
->Oct 25 00:17:49 vultr sudo:     root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
-root@vultr:~# 
-
+Oct 25 20:33:43 vultr sshd[1927]: Failed password for invalid user user from 2.57.121.25 port 26817 ssh2
+Oct 25 20:39:26 vultr sshd[2060]: Failed password for root from `10.0.0.5` port 42010 ssh2
+Oct 25 20:39:30 vultr sshd[2060]: Failed password for root from `10.0.0.5` port 42010 ssh2
+Oct 25 20:39:32 vultr sshd[2060]: Failed password for root from `10.0.0.5` port 42010 ssh2
+Oct 25 20:39:36 vultr sshd[2084]: Failed password for root from `10.0.0.5` port 14931 ssh2
+Oct 25 20:39:40 vultr sshd[2084]: Failed password for root from `10.0.0.5` port 14931 ssh2
+Oct 25 20:39:44 vultr sshd[2084]: Failed password for root from `10.0.0.5` port 14931 ssh2
+Oct 25 20:39:48 vultr sshd[2150]: Failed password for root from `10.0.0.5` port 20518 ssh2
+Oct 25 20:39:52 vultr sshd[2150]: Failed password for root from `10.0.0.5` port 20518 ssh2
+Oct 25 20:39:56 vultr sshd[2150]: Failed password for root from `10.0.0.5` port 20518 ssh2
+Oct 25 20:41:45 vultr sudo:     root : TTY=pts/0 ; PWD=/root/seclabs ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
 ...
 
-**Network (Wireshark)**: TCP streams show multiple SYN, SYN/ACK, RST; no completed SSH handshakes. (Screenshot: `screenshots/wireshark-ssh.png`)
+**Network (Wireshark)**: TCP streams show multiple SYN, SYN/ACK, RST; no completed SSH handshakes.
 
 ## IOCs (synthetic)
 - Attacker IP: `10.0.0.5` (RFC1918 used for lab)  
