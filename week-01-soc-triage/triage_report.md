@@ -8,7 +8,7 @@
 
 **Goal:** capture network traffic, produce /var/log evidence for failed logins, inspect Windows event logs, ingest Linux logs into a local Splunk, and produce a 1-page triage note.
 
-**Pen-test Overview:**
+**Pen-test Required Tasks:**
 1. Create an Ubuntu VM (Vagrant) for a target host.
 2. (Optional) Bring up a Windows evaluation VM (for event logs).
 3. Use Wireshark and tshark to capture traffic on the host-only network.
