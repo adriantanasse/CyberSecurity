@@ -22,17 +22,17 @@ sudo grep "Failed password" /var/log/auth.log | tail -n 50
 
 ## Evidence (sanitized excerpts)
 **/var/log/auth.log** (excerpt, IPs anonymized):
-Oct 24 23:56:37 vultr sshd[49572]: Failed password for root from 10.0.0.5 port 45888 ssh2
-Oct 25 00:13:45 vultr sshd[49936]: Failed password for root from 10.0.0.5 port 12582 ssh2
-Oct 25 00:13:47 vultr sshd[49936]: Failed password for root from 10.0.0.5 port 12582 ssh2
-Oct 25 00:13:49 vultr sshd[49936]: Failed password for root from 10.0.0.5 port 12582 ssh2
-Oct 25 00:13:54 vultr sshd[49938]: Failed password for root from 10.0.0.5 port 64398 ssh2
-Oct 25 00:13:56 vultr sshd[49938]: Failed password for root from 10.0.0.5 port 64398 ssh2
-Oct 25 00:13:59 vultr sshd[49938]: Failed password for root from 10.0.0.5 port 64398 ssh2
-Oct 25 00:14:02 vultr sshd[49940]: Failed password for root from 10.0.0.5 port 57368 ssh2
-Oct 25 00:14:06 vultr sshd[49940]: Failed password for root from 10.0.0.5 port 57368 ssh2
-Oct 25 00:14:09 vultr sshd[49940]: Failed password for root from 10.0.0.5 port 57368 ssh2
-Oct 25 00:17:49 vultr sudo:     root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
+>Oct 24 23:56:37 vultr sshd[49572]: Failed password for root from 10.0.0.5 port 45888 ssh2
+>Oct 25 00:13:45 vultr sshd[49936]: Failed password for root from 10.0.0.5 port 12582 ssh2
+>Oct 25 00:13:47 vultr sshd[49936]: Failed password for root from 10.0.0.5 port 12582 ssh2
+>Oct 25 00:13:49 vultr sshd[49936]: Failed password for root from 10.0.0.5 port 12582 ssh2
+>Oct 25 00:13:54 vultr sshd[49938]: Failed password for root from 10.0.0.5 port 64398 ssh2
+>Oct 25 00:13:56 vultr sshd[49938]: Failed password for root from 10.0.0.5 port 64398 ssh2
+>Oct 25 00:13:59 vultr sshd[49938]: Failed password for root from 10.0.0.5 port 64398 ssh2
+>Oct 25 00:14:02 vultr sshd[49940]: Failed password for root from 10.0.0.5 port 57368 ssh2
+>Oct 25 00:14:06 vultr sshd[49940]: Failed password for root from 10.0.0.5 port 57368 ssh2
+>Oct 25 00:14:09 vultr sshd[49940]: Failed password for root from 10.0.0.5 port 57368 ssh2
+>Oct 25 00:17:49 vultr sudo:     root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
 root@vultr:~# 
 
 ...
