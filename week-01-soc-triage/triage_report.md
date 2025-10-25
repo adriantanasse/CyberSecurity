@@ -68,8 +68,8 @@ Oct 25 20:41:45 vultr sudo:     root : TTY=pts/0 ; PWD=/root/seclabs ; USER=root
 
 <img width="1277" height="726" alt="Screenshot 2025-10-25 at 2 41 11 AM" src="https://github.com/user-attachments/assets/1db57f2f-bfa3-448d-9117-4e5673cb13c9" />
 
-<img width="648" height="378" alt="Screenshot 2025-10-25 at 2 40 56 AM" src="https://github.com/user-attachments/assets/0e52df30-a574-4260-b498-e1c119b2fb3c" />
 
+<img width="658" height="596" alt="Group 4 (2)" src="https://github.com/user-attachments/assets/cc8bf426-0735-4d04-b552-180b1b2ac4ac" />
 
 
 ## Notes on data
