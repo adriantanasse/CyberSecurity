@@ -18,6 +18,8 @@ Mac:sec-porto adriantanase$ TARGET=10.0.0.5; for i in {1..25}; do ssh -o Connect
 
 sudo tail -n 200 /var/log/auth.log
 
+<img width="853" height="434" alt="Screenshot 2025-10-25 at 6 01 33 PM" src="https://github.com/user-attachments/assets/81882406-0efc-4a53-97b3-08fd58262912" />
+
 sudo grep "Failed password" /var/log/auth.log | tail -n 50
 
 ## Evidence (sanitized excerpts)
@@ -41,7 +43,7 @@ root@vultr:~#
 
 ## IOCs (synthetic)
 - Attacker IP: `10.0.0.5` (RFC1918 used for lab)  
-- Attempted usernames: `invaliduser`, `testuser`  
+- Attempted usernames: `pentest-user`
 - Related log lines: see `week-01-soc-triage/artifacts/authlog-excerpt.txt`
 
 ## Actions taken / recommended containment
