@@ -1,0 +1,5 @@
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp1s0           UP             192.248.179.230/23 2001:19f0:6c00:17a8:5400:5ff:feb8:d81a/64 fe80::5400:5ff:feb8:d81a/64 
+enp9s0           UP             10.9.96.3/20 fe80::5800:5ff:feb8:d81a/64 
+docker0          UP             172.17.0.1/16 fe80::42:dff:fed6:39d9/64 
+vethe313082@if5  UP             fe80::24db:ceff:fe4b:f040/64 

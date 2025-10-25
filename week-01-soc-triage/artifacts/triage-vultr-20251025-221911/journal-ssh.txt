@@ -1,0 +1,201 @@
+-- Journal begins at Fri 2025-10-24 14:07:52 UTC, ends at Sat 2025-10-25 22:19:11 UTC. --
+Oct 25 21:58:53 vultr sshd[4746]: Connection closed by invalid user pentest-user 46.223.3.81 port 17814 [preauth]
+Oct 25 21:58:53 vultr sshd[4748]: Invalid user pentest-user from 46.223.3.81 port 21817
+Oct 25 21:58:54 vultr sshd[4748]: Connection closed by invalid user pentest-user 46.223.3.81 port 21817 [preauth]
+Oct 25 21:58:54 vultr sshd[4750]: Invalid user pentest-user from 46.223.3.81 port 21772
+Oct 25 21:58:54 vultr sshd[4750]: Connection closed by invalid user pentest-user 46.223.3.81 port 21772 [preauth]
+Oct 25 21:58:54 vultr sshd[4752]: Invalid user pentest-user from 46.223.3.81 port 28397
+Oct 25 21:58:54 vultr sshd[4752]: Connection closed by invalid user pentest-user 46.223.3.81 port 28397 [preauth]
+Oct 25 21:58:54 vultr sshd[4754]: Invalid user pentest-user from 46.223.3.81 port 28398
+Oct 25 21:58:54 vultr sshd[4754]: Connection closed by invalid user pentest-user 46.223.3.81 port 28398 [preauth]
+Oct 25 21:58:55 vultr sshd[4756]: Invalid user pentest-user from 46.223.3.81 port 21775
+Oct 25 21:58:55 vultr sshd[4756]: Connection closed by invalid user pentest-user 46.223.3.81 port 21775 [preauth]
+Oct 25 21:58:55 vultr sshd[4758]: Invalid user pentest-user from 46.223.3.81 port 43948
+Oct 25 21:58:55 vultr sshd[4758]: Connection closed by invalid user pentest-user 46.223.3.81 port 43948 [preauth]
+Oct 25 21:58:55 vultr sshd[4760]: Invalid user pentest-user from 46.223.3.81 port 21823
+Oct 25 21:58:55 vultr sshd[4760]: Connection closed by invalid user pentest-user 46.223.3.81 port 21823 [preauth]
+Oct 25 21:58:55 vultr sshd[4762]: Invalid user pentest-user from 46.223.3.81 port 21778
+Oct 25 21:58:56 vultr sshd[4762]: Connection closed by invalid user pentest-user 46.223.3.81 port 21778 [preauth]
+Oct 25 21:58:56 vultr sshd[4764]: Invalid user pentest-user from 46.223.3.81 port 21779
+Oct 25 21:58:56 vultr sshd[4764]: Connection closed by invalid user pentest-user 46.223.3.81 port 21779 [preauth]
+Oct 25 21:59:07 vultr sshd[4766]: Accepted password for root from 46.223.3.81 port 21781 ssh2
+Oct 25 21:59:07 vultr sshd[4766]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)
+Oct 25 21:59:07 vultr sshd[4766]: Received disconnect from 46.223.3.81 port 21781:11: disconnected by user
+Oct 25 21:59:07 vultr sshd[4766]: Disconnected from user root 46.223.3.81 port 21781
+Oct 25 21:59:07 vultr sshd[4766]: pam_unix(sshd:session): session closed for user root
+Oct 25 22:00:11 vultr sshd[4802]: Invalid user user from 78.128.112.74 port 39006
+Oct 25 22:00:11 vultr sshd[4802]: pam_unix(sshd:auth): check pass; user unknown
+Oct 25 22:00:11 vultr sshd[4802]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=78.128.112.74
+Oct 25 22:00:13 vultr sshd[4802]: Failed password for invalid user user from 78.128.112.74 port 39006 ssh2
+Oct 25 22:00:14 vultr sshd[4802]: Connection closed by invalid user user 78.128.112.74 port 39006 [preauth]
+Oct 25 22:00:47 vultr sshd[4804]: error: kex_exchange_identification: Connection closed by remote host
+Oct 25 22:00:47 vultr sshd[4804]: Connection closed by 213.199.38.115 port 45192
+Oct 25 22:00:47 vultr sshd[4805]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:00:49 vultr sshd[4805]: Failed password for root from 213.199.38.115 port 45202 ssh2
+Oct 25 22:00:51 vultr sshd[4805]: Connection closed by authenticating user root 213.199.38.115 port 45202 [preauth]
+Oct 25 22:00:51 vultr sshd[4807]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:00:53 vultr sshd[4807]: Failed password for root from 213.199.38.115 port 45204 ssh2
+Oct 25 22:00:55 vultr sshd[4807]: Connection closed by authenticating user root 213.199.38.115 port 45204 [preauth]
+Oct 25 22:00:55 vultr sshd[4809]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:00:57 vultr sshd[4809]: Failed password for root from 213.199.38.115 port 45206 ssh2
+Oct 25 22:00:59 vultr sshd[4809]: Connection closed by authenticating user root 213.199.38.115 port 45206 [preauth]
+Oct 25 22:00:59 vultr sshd[4811]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:01 vultr sshd[4811]: Failed password for root from 213.199.38.115 port 38346 ssh2
+Oct 25 22:01:03 vultr sshd[4811]: Connection closed by authenticating user root 213.199.38.115 port 38346 [preauth]
+Oct 25 22:01:03 vultr sshd[4827]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:05 vultr sshd[4827]: Failed password for root from 213.199.38.115 port 38362 ssh2
+Oct 25 22:01:07 vultr sshd[4827]: Connection closed by authenticating user root 213.199.38.115 port 38362 [preauth]
+Oct 25 22:01:07 vultr sshd[4829]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:09 vultr sshd[4829]: Failed password for root from 213.199.38.115 port 57948 ssh2
+Oct 25 22:01:11 vultr sshd[4829]: Connection closed by authenticating user root 213.199.38.115 port 57948 [preauth]
+Oct 25 22:01:11 vultr sshd[4831]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:13 vultr sshd[4831]: Failed password for root from 213.199.38.115 port 57956 ssh2
+Oct 25 22:01:13 vultr sshd[4831]: Connection closed by authenticating user root 213.199.38.115 port 57956 [preauth]
+Oct 25 22:01:13 vultr sshd[4833]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:15 vultr sshd[4833]: Failed password for root from 213.199.38.115 port 57966 ssh2
+Oct 25 22:01:17 vultr sshd[4833]: Connection closed by authenticating user root 213.199.38.115 port 57966 [preauth]
+Oct 25 22:01:17 vultr sshd[4835]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:19 vultr sshd[4835]: Failed password for root from 213.199.38.115 port 49542 ssh2
+Oct 25 22:01:19 vultr sshd[4837]: Invalid user solv from 139.59.31.209 port 52522
+Oct 25 22:01:19 vultr sshd[4835]: Connection closed by authenticating user root 213.199.38.115 port 49542 [preauth]
+Oct 25 22:01:19 vultr sshd[4839]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:19 vultr sshd[4837]: pam_unix(sshd:auth): check pass; user unknown
+Oct 25 22:01:19 vultr sshd[4837]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=139.59.31.209
+Oct 25 22:01:21 vultr sshd[4839]: Failed password for root from 213.199.38.115 port 49546 ssh2
+Oct 25 22:01:21 vultr sshd[4837]: Failed password for invalid user solv from 139.59.31.209 port 52522 ssh2
+Oct 25 22:01:22 vultr sshd[4837]: Connection closed by invalid user solv 139.59.31.209 port 52522 [preauth]
+Oct 25 22:01:23 vultr sshd[4839]: Connection closed by authenticating user root 213.199.38.115 port 49546 [preauth]
+Oct 25 22:01:23 vultr sshd[4841]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:25 vultr sshd[4841]: Failed password for root from 213.199.38.115 port 49558 ssh2
+Oct 25 22:01:25 vultr sshd[4841]: Connection closed by authenticating user root 213.199.38.115 port 49558 [preauth]
+Oct 25 22:01:25 vultr sshd[4843]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:27 vultr sshd[4843]: Failed password for root from 213.199.38.115 port 53752 ssh2
+Oct 25 22:01:29 vultr sshd[4843]: Connection closed by authenticating user root 213.199.38.115 port 53752 [preauth]
+Oct 25 22:01:29 vultr sshd[4845]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:31 vultr sshd[4845]: Failed password for root from 213.199.38.115 port 53756 ssh2
+Oct 25 22:01:33 vultr sshd[4845]: Connection closed by authenticating user root 213.199.38.115 port 53756 [preauth]
+Oct 25 22:01:33 vultr sshd[4847]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:35 vultr sshd[4847]: Failed password for root from 213.199.38.115 port 53766 ssh2
+Oct 25 22:01:37 vultr sshd[4847]: Connection closed by authenticating user root 213.199.38.115 port 53766 [preauth]
+Oct 25 22:01:37 vultr sshd[4849]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:40 vultr sshd[4849]: Failed password for root from 213.199.38.115 port 56344 ssh2
+Oct 25 22:01:41 vultr sshd[4849]: Connection closed by authenticating user root 213.199.38.115 port 56344 [preauth]
+Oct 25 22:01:41 vultr sshd[4851]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:43 vultr sshd[4851]: Failed password for root from 213.199.38.115 port 56360 ssh2
+Oct 25 22:01:45 vultr sshd[4851]: Connection closed by authenticating user root 213.199.38.115 port 56360 [preauth]
+Oct 25 22:01:45 vultr sshd[4853]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:47 vultr sshd[4853]: Failed password for root from 213.199.38.115 port 36664 ssh2
+Oct 25 22:01:47 vultr sshd[4853]: Connection closed by authenticating user root 213.199.38.115 port 36664 [preauth]
+Oct 25 22:01:48 vultr sshd[4855]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:50 vultr sshd[4855]: Failed password for root from 213.199.38.115 port 36678 ssh2
+Oct 25 22:01:51 vultr sshd[4855]: Connection closed by authenticating user root 213.199.38.115 port 36678 [preauth]
+Oct 25 22:01:52 vultr sshd[4857]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:53 vultr sshd[4857]: Failed password for root from 213.199.38.115 port 36682 ssh2
+Oct 25 22:01:54 vultr sshd[4857]: Connection closed by authenticating user root 213.199.38.115 port 36682 [preauth]
+Oct 25 22:01:54 vultr sshd[4873]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:55 vultr sshd[4873]: Failed password for root from 213.199.38.115 port 36688 ssh2
+Oct 25 22:01:56 vultr sshd[4873]: Connection closed by authenticating user root 213.199.38.115 port 36688 [preauth]
+Oct 25 22:01:57 vultr sshd[4875]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:01:59 vultr sshd[4875]: Failed password for root from 213.199.38.115 port 41338 ssh2
+Oct 25 22:02:01 vultr sshd[4875]: Connection closed by authenticating user root 213.199.38.115 port 41338 [preauth]
+Oct 25 22:02:02 vultr sshd[4877]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:04 vultr sshd[4877]: Failed password for root from 213.199.38.115 port 41346 ssh2
+Oct 25 22:02:06 vultr sshd[4877]: Connection closed by authenticating user root 213.199.38.115 port 41346 [preauth]
+Oct 25 22:02:06 vultr sshd[4879]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:08 vultr sshd[4879]: Failed password for root from 213.199.38.115 port 33634 ssh2
+Oct 25 22:02:08 vultr sshd[4879]: Connection closed by authenticating user root 213.199.38.115 port 33634 [preauth]
+Oct 25 22:02:08 vultr sshd[4881]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:10 vultr sshd[4881]: Failed password for root from 213.199.38.115 port 33638 ssh2
+Oct 25 22:02:12 vultr sshd[4881]: Connection closed by authenticating user root 213.199.38.115 port 33638 [preauth]
+Oct 25 22:02:12 vultr sshd[4883]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:14 vultr sshd[4883]: Failed password for root from 213.199.38.115 port 33642 ssh2
+Oct 25 22:02:16 vultr sshd[4883]: Connection closed by authenticating user root 213.199.38.115 port 33642 [preauth]
+Oct 25 22:02:16 vultr sshd[4886]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:18 vultr sshd[4886]: Failed password for root from 213.199.38.115 port 48144 ssh2
+Oct 25 22:02:18 vultr sshd[4886]: Connection closed by authenticating user root 213.199.38.115 port 48144 [preauth]
+Oct 25 22:02:19 vultr sshd[4888]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:21 vultr sshd[4888]: Failed password for root from 213.199.38.115 port 48148 ssh2
+Oct 25 22:02:23 vultr sshd[4888]: Connection closed by authenticating user root 213.199.38.115 port 48148 [preauth]
+Oct 25 22:02:23 vultr sshd[4890]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:25 vultr sshd[4890]: Failed password for root from 213.199.38.115 port 48158 ssh2
+Oct 25 22:02:25 vultr sshd[4890]: Connection closed by authenticating user root 213.199.38.115 port 48158 [preauth]
+Oct 25 22:02:25 vultr sshd[4906]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:27 vultr sshd[4906]: Failed password for root from 213.199.38.115 port 48442 ssh2
+Oct 25 22:02:29 vultr sshd[4906]: Connection closed by authenticating user root 213.199.38.115 port 48442 [preauth]
+Oct 25 22:02:29 vultr sshd[4908]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:31 vultr sshd[4908]: Failed password for root from 213.199.38.115 port 48456 ssh2
+Oct 25 22:02:31 vultr sshd[4908]: Connection closed by authenticating user root 213.199.38.115 port 48456 [preauth]
+Oct 25 22:02:31 vultr sshd[4910]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:34 vultr sshd[4910]: Failed password for root from 213.199.38.115 port 48470 ssh2
+Oct 25 22:02:35 vultr sshd[4910]: Connection closed by authenticating user root 213.199.38.115 port 48470 [preauth]
+Oct 25 22:02:35 vultr sshd[4912]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:37 vultr sshd[4912]: Failed password for root from 213.199.38.115 port 44112 ssh2
+Oct 25 22:02:39 vultr sshd[4912]: Connection closed by authenticating user root 213.199.38.115 port 44112 [preauth]
+Oct 25 22:02:40 vultr sshd[4914]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:42 vultr sshd[4914]: Failed password for root from 213.199.38.115 port 44120 ssh2
+Oct 25 22:02:42 vultr sshd[4914]: Connection closed by authenticating user root 213.199.38.115 port 44120 [preauth]
+Oct 25 22:02:42 vultr sshd[4917]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:45 vultr sshd[4917]: Failed password for root from 213.199.38.115 port 44122 ssh2
+Oct 25 22:02:46 vultr sshd[4917]: Connection closed by authenticating user root 213.199.38.115 port 44122 [preauth]
+Oct 25 22:02:46 vultr sshd[4919]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:48 vultr sshd[4919]: Failed password for root from 213.199.38.115 port 47534 ssh2
+Oct 25 22:02:48 vultr sshd[4919]: Connection closed by authenticating user root 213.199.38.115 port 47534 [preauth]
+Oct 25 22:02:49 vultr sshd[4921]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:51 vultr sshd[4921]: Failed password for root from 213.199.38.115 port 47542 ssh2
+Oct 25 22:02:52 vultr sshd[4921]: Connection closed by authenticating user root 213.199.38.115 port 47542 [preauth]
+Oct 25 22:02:53 vultr sshd[4923]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:54 vultr sshd[4923]: Failed password for root from 213.199.38.115 port 47550 ssh2
+Oct 25 22:02:55 vultr sshd[4923]: Connection closed by authenticating user root 213.199.38.115 port 47550 [preauth]
+Oct 25 22:02:55 vultr sshd[4925]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:02:57 vultr sshd[4925]: Failed password for root from 213.199.38.115 port 47558 ssh2
+Oct 25 22:02:59 vultr sshd[4925]: Connection closed by authenticating user root 213.199.38.115 port 47558 [preauth]
+Oct 25 22:02:59 vultr sshd[4927]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:03:01 vultr sshd[4927]: Failed password for root from 213.199.38.115 port 48704 ssh2
+Oct 25 22:03:03 vultr sshd[4927]: Connection closed by authenticating user root 213.199.38.115 port 48704 [preauth]
+Oct 25 22:03:04 vultr sshd[4929]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:03:05 vultr sshd[4929]: Failed password for root from 213.199.38.115 port 48714 ssh2
+Oct 25 22:03:06 vultr sshd[4929]: Connection closed by authenticating user root 213.199.38.115 port 48714 [preauth]
+Oct 25 22:03:06 vultr sshd[4931]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=213.199.38.115  user=root
+Oct 25 22:03:08 vultr sshd[4931]: Failed password for root from 213.199.38.115 port 57288 ssh2
+Oct 25 22:03:10 vultr sshd[4931]: Connection closed by authenticating user root 213.199.38.115 port 57288 [preauth]
+Oct 25 22:07:39 vultr sshd[5031]: Accepted password for root from 46.223.3.81 port 17814 ssh2
+Oct 25 22:07:39 vultr sshd[5031]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)
+Oct 25 22:07:45 vultr sshd[5043]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=193.46.255.159  user=root
+Oct 25 22:07:47 vultr sshd[5043]: Failed password for root from 193.46.255.159 port 25182 ssh2
+Oct 25 22:07:52 vultr sshd[5043]: Failed password for root from 193.46.255.159 port 25182 ssh2
+Oct 25 22:07:55 vultr sshd[5043]: Failed password for root from 193.46.255.159 port 25182 ssh2
+Oct 25 22:07:55 vultr sshd[5043]: Received disconnect from 193.46.255.159 port 25182:11:  [preauth]
+Oct 25 22:07:55 vultr sshd[5043]: Disconnected from authenticating user root 193.46.255.159 port 25182 [preauth]
+Oct 25 22:07:55 vultr sshd[5043]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=193.46.255.159  user=root
+Oct 25 22:07:55 vultr sshd[5048]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=193.46.255.159  user=root
+Oct 25 22:07:57 vultr sshd[5048]: Failed password for root from 193.46.255.159 port 64462 ssh2
+Oct 25 22:08:01 vultr sshd[5048]: Failed password for root from 193.46.255.159 port 64462 ssh2
+Oct 25 22:08:03 vultr sshd[5048]: Failed password for root from 193.46.255.159 port 64462 ssh2
+Oct 25 22:08:05 vultr sshd[5048]: Received disconnect from 193.46.255.159 port 64462:11:  [preauth]
+Oct 25 22:08:05 vultr sshd[5048]: Disconnected from authenticating user root 193.46.255.159 port 64462 [preauth]
+Oct 25 22:08:05 vultr sshd[5048]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=193.46.255.159  user=root
+Oct 25 22:08:05 vultr sshd[5050]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=193.46.255.159  user=root
+Oct 25 22:08:08 vultr sshd[5050]: Failed password for root from 193.46.255.159 port 24849 ssh2
+Oct 25 22:08:11 vultr sshd[5050]: Failed password for root from 193.46.255.159 port 24849 ssh2
+Oct 25 22:08:15 vultr sshd[5050]: Failed password for root from 193.46.255.159 port 24849 ssh2
+Oct 25 22:08:17 vultr sshd[5050]: Received disconnect from 193.46.255.159 port 24849:11:  [preauth]
+Oct 25 22:08:17 vultr sshd[5050]: Disconnected from authenticating user root 193.46.255.159 port 24849 [preauth]
+Oct 25 22:08:17 vultr sshd[5050]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=193.46.255.159  user=root
+Oct 25 22:15:30 vultr sshd[5222]: Invalid user user from 62.60.131.157 port 42014
+Oct 25 22:15:30 vultr sshd[5222]: pam_unix(sshd:auth): check pass; user unknown
+Oct 25 22:15:30 vultr sshd[5222]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=62.60.131.157
+Oct 25 22:15:32 vultr sshd[5222]: Failed password for invalid user user from 62.60.131.157 port 42014 ssh2
+Oct 25 22:15:33 vultr sshd[5222]: pam_unix(sshd:auth): check pass; user unknown
+Oct 25 22:15:35 vultr sshd[5222]: Failed password for invalid user user from 62.60.131.157 port 42014 ssh2
+Oct 25 22:15:37 vultr sshd[5222]: pam_unix(sshd:auth): check pass; user unknown
+Oct 25 22:15:39 vultr sshd[5222]: Failed password for invalid user user from 62.60.131.157 port 42014 ssh2
+Oct 25 22:15:39 vultr sshd[5222]: pam_unix(sshd:auth): check pass; user unknown
+Oct 25 22:15:42 vultr sshd[5222]: Failed password for invalid user user from 62.60.131.157 port 42014 ssh2
+Oct 25 22:15:44 vultr sshd[5222]: pam_unix(sshd:auth): check pass; user unknown
+Oct 25 22:15:46 vultr sshd[5222]: Failed password for invalid user user from 62.60.131.157 port 42014 ssh2
+Oct 25 22:15:46 vultr sshd[5222]: Received disconnect from 62.60.131.157 port 42014:11: Bye [preauth]
+Oct 25 22:15:46 vultr sshd[5222]: Disconnected from invalid user user 62.60.131.157 port 42014 [preauth]
+Oct 25 22:15:46 vultr sshd[5222]: PAM 4 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=62.60.131.157
+Oct 25 22:15:46 vultr sshd[5222]: PAM service(sshd) ignoring max retries; 5 > 3
+Oct 25 22:18:11 vultr sshd[5270]: Accepted password for root from 46.223.3.81 port 21777 ssh2
+Oct 25 22:18:11 vultr sshd[5270]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)

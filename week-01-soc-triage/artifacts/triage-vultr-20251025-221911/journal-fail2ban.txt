@@ -1,0 +1,54 @@
+-- Journal begins at Fri 2025-10-24 14:07:52 UTC, ends at Sat 2025-10-25 22:19:11 UTC. --
+Oct 25 16:15:20 vultr systemd[1]: Starting Fail2Ban Service...
+Oct 25 16:15:20 vultr systemd[1]: Started Fail2Ban Service.
+Oct 25 16:15:21 vultr fail2ban-server[73226]: Server ready
+-- Boot 7f9621d5845d4b438baa62b048ef8975 --
+Oct 25 16:17:10 vultr systemd[1]: Starting Fail2Ban Service...
+Oct 25 16:17:10 vultr systemd[1]: Started Fail2Ban Service.
+Oct 25 16:17:11 vultr fail2ban-server[898]: Server ready
+Oct 25 16:24:23 vultr systemd[1]: Stopping Fail2Ban Service...
+Oct 25 16:24:25 vultr fail2ban-client[1465]: Shutdown successful
+Oct 25 16:24:25 vultr systemd[1]: fail2ban.service: Succeeded.
+Oct 25 16:24:25 vultr systemd[1]: Stopped Fail2Ban Service.
+Oct 25 16:24:25 vultr systemd[1]: Starting Fail2Ban Service...
+Oct 25 16:24:25 vultr systemd[1]: Started Fail2Ban Service.
+Oct 25 16:24:25 vultr fail2ban-server[1473]: 2025-10-25 16:24:25,250 fail2ban                [1473]: ERROR   Failed during configuration: While reading from '/etc/fail2ban/jail.local' [line 286]: section 'sshd' already exists
+Oct 25 16:24:25 vultr fail2ban-server[1473]: 2025-10-25 16:24:25,252 fail2ban                [1473]: ERROR   Async configuration of server failed
+Oct 25 16:24:25 vultr systemd[1]: fail2ban.service: Main process exited, code=exited, status=255/EXCEPTION
+Oct 25 16:24:25 vultr systemd[1]: fail2ban.service: Failed with result 'exit-code'.
+Oct 25 16:28:02 vultr systemd[1]: Starting Fail2Ban Service...
+Oct 25 16:28:02 vultr systemd[1]: Started Fail2Ban Service.
+Oct 25 16:28:02 vultr fail2ban-server[1687]: 2025-10-25 16:28:02,717 fail2ban                [1687]: ERROR   Failed during configuration: While reading from '/etc/fail2ban/jail.local' [line 286]: section 'sshd' already exists
+Oct 25 16:28:02 vultr fail2ban-server[1687]: 2025-10-25 16:28:02,719 fail2ban                [1687]: ERROR   Async configuration of server failed
+Oct 25 16:28:02 vultr systemd[1]: fail2ban.service: Main process exited, code=exited, status=255/EXCEPTION
+Oct 25 16:28:02 vultr systemd[1]: fail2ban.service: Failed with result 'exit-code'.
+Oct 25 16:29:03 vultr systemd[1]: Starting Fail2Ban Service...
+Oct 25 16:29:03 vultr systemd[1]: Started Fail2Ban Service.
+Oct 25 16:29:03 vultr fail2ban-server[1714]: Server ready
+-- Boot f052f29f90934afd9743e7b57ef5715e --
+Oct 25 16:57:00 vultr systemd[1]: Starting Fail2Ban Service...
+Oct 25 16:57:00 vultr systemd[1]: Started Fail2Ban Service.
+Oct 25 16:57:01 vultr fail2ban-server[899]: Server ready
+-- Boot 3e6bd5e08ed64205b58ceef6d5d3778d --
+Oct 25 20:23:56 vultr systemd[1]: Starting Fail2Ban Service...
+Oct 25 20:23:56 vultr systemd[1]: Started Fail2Ban Service.
+Oct 25 20:23:56 vultr fail2ban-server[956]: Server ready
+Oct 25 20:29:49 vultr systemd[1]: Stopping Fail2Ban Service...
+Oct 25 20:29:50 vultr fail2ban-client[1690]: Shutdown successful
+Oct 25 20:29:50 vultr systemd[1]: fail2ban.service: Succeeded.
+Oct 25 20:29:50 vultr systemd[1]: Stopped Fail2Ban Service.
+Oct 25 20:29:50 vultr systemd[1]: Starting Fail2Ban Service...
+Oct 25 20:29:50 vultr systemd[1]: Started Fail2Ban Service.
+Oct 25 20:29:50 vultr fail2ban-server[1698]: Server ready
+Oct 25 20:30:46 vultr systemd[1]: Stopping Fail2Ban Service...
+Oct 25 20:30:48 vultr fail2ban-client[1765]: Shutdown successful
+Oct 25 20:30:48 vultr systemd[1]: fail2ban.service: Succeeded.
+Oct 25 20:30:48 vultr systemd[1]: Stopped Fail2Ban Service.
+Oct 25 20:30:48 vultr systemd[1]: Starting Fail2Ban Service...
+Oct 25 20:30:48 vultr systemd[1]: Started Fail2Ban Service.
+Oct 25 20:30:48 vultr fail2ban-server[1773]: 2025-10-25 20:30:48,238 fail2ban                [1773]: ERROR   Failed during configuration: File contains no section headers.
+Oct 25 20:30:48 vultr fail2ban-server[1773]: file: '/etc/fail2ban/jail.local', line: 21
+Oct 25 20:30:48 vultr fail2ban-server[1773]: 'ignoreip = 46.223.3.81\n'
+Oct 25 20:30:48 vultr fail2ban-server[1773]: 2025-10-25 20:30:48,240 fail2ban                [1773]: ERROR   Async configuration of server failed
+Oct 25 20:30:48 vultr systemd[1]: fail2ban.service: Main process exited, code=exited, status=255/EXCEPTION
+Oct 25 20:30:48 vultr systemd[1]: fail2ban.service: Failed with result 'exit-code'.

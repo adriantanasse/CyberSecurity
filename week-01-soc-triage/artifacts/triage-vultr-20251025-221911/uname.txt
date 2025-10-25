@@ -1,0 +1,1 @@
+Linux vultr 5.10.0-36-amd64 #1 SMP Debian 5.10.244-1 (2025-09-29) x86_64 GNU/Linux

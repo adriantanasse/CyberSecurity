@@ -1,0 +1,23 @@
+State  Recv-Q Send-Q   Local Address:Port  Peer Address:Port Process                                                   
+LISTEN 0      4096           0.0.0.0:40617      0.0.0.0:*     users:(("rpc.mountd",pid=961,fd=13))                     
+LISTEN 0      4096           0.0.0.0:5355       0.0.0.0:*     users:(("systemd-resolve",pid=461,fd=12))                
+LISTEN 0      4096           0.0.0.0:2223       0.0.0.0:*     users:(("docker-proxy",pid=2920,fd=4))                   
+LISTEN 0      4096         127.0.0.1:42895      0.0.0.0:*     users:(("containerd",pid=975,fd=13))                     
+LISTEN 0      4096           0.0.0.0:32943      0.0.0.0:*     users:(("rpc.mountd",pid=961,fd=9))                      
+LISTEN 0      4096           0.0.0.0:111        0.0.0.0:*     users:(("rpcbind",pid=460,fd=4),("systemd",pid=1,fd=103))
+LISTEN 0      64             0.0.0.0:37777      0.0.0.0:*                                                              
+LISTEN 0      4096           0.0.0.0:55189      0.0.0.0:*     users:(("rpc.mountd",pid=961,fd=17))                     
+LISTEN 0      4096     127.0.0.53%lo:53         0.0.0.0:*     users:(("systemd-resolve",pid=461,fd=18))                
+LISTEN 0      128            0.0.0.0:22         0.0.0.0:*     users:(("sshd",pid=979,fd=3))                            
+LISTEN 0      20           127.0.0.1:25         0.0.0.0:*     users:(("exim4",pid=1488,fd=4))                          
+LISTEN 0      64             0.0.0.0:2049       0.0.0.0:*                                                              
+ESTAB  0      0      192.248.179.230:22     46.223.3.81:21777 users:(("sshd",pid=5270,fd=4))                           
+LISTEN 0      4096              [::]:39723         [::]:*     users:(("rpc.mountd",pid=961,fd=19))                     
+LISTEN 0      4096              [::]:5355          [::]:*     users:(("systemd-resolve",pid=461,fd=14))                
+LISTEN 0      4096              [::]:50669         [::]:*     users:(("rpc.mountd",pid=961,fd=11))                     
+LISTEN 0      4096              [::]:111           [::]:*     users:(("rpcbind",pid=460,fd=6),("systemd",pid=1,fd=105))
+LISTEN 0      128               [::]:22            [::]:*     users:(("sshd",pid=979,fd=4))                            
+LISTEN 0      20               [::1]:25            [::]:*     users:(("exim4",pid=1488,fd=5))                          
+LISTEN 0      4096              [::]:46459         [::]:*     users:(("rpc.mountd",pid=961,fd=15))                     
+LISTEN 0      64                [::]:2049          [::]:*                                                              
+LISTEN 0      64                [::]:41347         [::]:*                                                              

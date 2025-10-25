@@ -1,0 +1,17 @@
+● fail2ban.service - Fail2Ban Service
+     Loaded: loaded (/lib/systemd/system/fail2ban.service; disabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2025-10-25 20:30:48 UTC; 1h 48min ago
+       Docs: man:fail2ban(1)
+   Main PID: 1773 (code=exited, status=255/EXCEPTION)
+        CPU: 55ms
+
+Oct 25 20:30:48 vultr systemd[1]: fail2ban.service: Succeeded.
+Oct 25 20:30:48 vultr systemd[1]: Stopped Fail2Ban Service.
+Oct 25 20:30:48 vultr systemd[1]: Starting Fail2Ban Service...
+Oct 25 20:30:48 vultr systemd[1]: Started Fail2Ban Service.
+Oct 25 20:30:48 vultr fail2ban-server[1773]: 2025-10-25 20:30:48,238 fail2ban                [1773]: ERROR   Failed during configuration: File contains no section headers.
+Oct 25 20:30:48 vultr fail2ban-server[1773]: file: '/etc/fail2ban/jail.local', line: 21
+Oct 25 20:30:48 vultr fail2ban-server[1773]: 'ignoreip = 46.223.3.81\n'
+Oct 25 20:30:48 vultr fail2ban-server[1773]: 2025-10-25 20:30:48,240 fail2ban                [1773]: ERROR   Async configuration of server failed
+Oct 25 20:30:48 vultr systemd[1]: fail2ban.service: Main process exited, code=exited, status=255/EXCEPTION
+Oct 25 20:30:48 vultr systemd[1]: fail2ban.service: Failed with result 'exit-code'.

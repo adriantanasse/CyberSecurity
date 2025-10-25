@@ -1,0 +1,22 @@
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2025-10-25 20:23:56 UTC; 1h 55min ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 979 (sshd)
+      Tasks: 1 (limit: 5850)
+     Memory: 3.7M
+        CPU: 4.602s
+     CGroup: /system.slice/ssh.service
+             └─979 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+
+Oct 25 22:15:39 vultr sshd[5222]: pam_unix(sshd:auth): check pass; user unknown
+Oct 25 22:15:42 vultr sshd[5222]: Failed password for invalid user user from 62.60.131.157 port 42014 ssh2
+Oct 25 22:15:44 vultr sshd[5222]: pam_unix(sshd:auth): check pass; user unknown
+Oct 25 22:15:46 vultr sshd[5222]: Failed password for invalid user user from 62.60.131.157 port 42014 ssh2
+Oct 25 22:15:46 vultr sshd[5222]: Received disconnect from 62.60.131.157 port 42014:11: Bye [preauth]
+Oct 25 22:15:46 vultr sshd[5222]: Disconnected from invalid user user 62.60.131.157 port 42014 [preauth]
+Oct 25 22:15:46 vultr sshd[5222]: PAM 4 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=62.60.131.157
+Oct 25 22:15:46 vultr sshd[5222]: PAM service(sshd) ignoring max retries; 5 > 3
+Oct 25 22:18:11 vultr sshd[5270]: Accepted password for root from 46.223.3.81 port 21777 ssh2
+Oct 25 22:18:11 vultr sshd[5270]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)

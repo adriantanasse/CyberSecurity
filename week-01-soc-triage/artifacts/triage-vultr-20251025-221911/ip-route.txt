@@ -1,0 +1,5 @@
+default via 192.248.178.1 dev enp1s0 
+10.9.96.0/20 dev enp9s0 proto kernel scope link src 10.9.96.3 
+169.254.169.254 via 192.248.178.1 dev enp1s0 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 
+192.248.178.0/23 dev enp1s0 proto kernel scope link src 192.248.179.230 

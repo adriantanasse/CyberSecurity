@@ -1,0 +1,143 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root        1000  0.0  1.8 1382516 93424 ?       Ssl  20:23   0:00 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root         975  0.0  0.8 1336712 45116 ?       Ssl  20:23   0:03 /usr/bin/containerd
+root        2938  0.0  0.4 1322148 23680 ?       Sl   21:02   0:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 606cbbab5967bbbaf9d369367a3affade54721de35f0bb5cf4763bccbc06137a -address /run/containerd/containerd.sock
+root         996  0.0  0.4 109184 21192 ?        Ssl  20:23   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root        2920  0.0  0.3 1148292 15136 ?       Sl   21:02   0:00 /usr/sbin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 2223 -container-ip 172.17.0.2 -container-port 22
+root         303  0.0  0.2  31984 14992 ?        Ss   20:23   0:00 /lib/systemd/systemd-journald
+root           1  0.0  0.2 101768 12868 ?        Ss   20:23   0:01 /sbin/init vultr
+systemd+     461  0.0  0.2  24632 12640 ?        Ss   20:23   0:00 /lib/systemd/systemd-resolved
+root        5270  0.0  0.1  14632  8868 ?        Ss   22:18   0:00 sshd: root@pts/0
+root        1612  0.0  0.1  15312  8732 ?        Ss   20:27   0:00 /lib/systemd/systemd --user
+root         734  0.0  0.1  99884  7572 ?        Ssl  20:23   0:00 /sbin/dhclient -4 -v -i -pf /run/dhclient.enp1s0.pid -lf /var/lib/dhcp/dhclient.enp1s0.leases -I -df /var/lib/dhcp/dhclient6.enp1s0.leases enp1s0
+root         979  0.0  0.1  13352  7488 ?        Ss   20:23   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root         937  0.0  0.1  13996  7108 ?        Ss   20:23   0:00 /lib/systemd/systemd-logind
+root         933  0.0  0.1 220796  6876 ?        Ssl  20:23   0:00 /usr/sbin/rsyslogd -n -iNONE
+root        1627  0.0  0.1  10316  5188 tty1     S+   20:27   0:00 -bash
+root        5277  0.0  0.1  10304  5160 pts/0    Ss   22:18   0:00 -bash
+root         339  0.0  0.1  21524  5144 ?        Ss   20:23   0:00 /lib/systemd/systemd-udevd
+root        5311  0.0  0.1  12668  5128 pts/0    S+   22:19   0:00 sudo /tmp/triage.sh
+Debian-+    1488  0.0  0.0  18604  4436 ?        Ss   20:23   0:00 /usr/sbin/exim4 -bd -q30m
+root        1591  0.0  0.0   7252  4420 tty1     Ss   20:26   0:00 /bin/login -p --
+message+     929  0.0  0.0   8220  4336 ?        Ss   20:23   0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+ntp          978  0.0  0.0  74732  4028 ?        Ssl  20:23   0:00 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 107:112
+_rpc         460  0.0  0.0   7900  3856 ?        Ss   20:23   0:00 /sbin/rpcbind -f -w
+root        5312  0.0  0.0   8812  3400 pts/0    S+   22:19   0:00 bash /tmp/triage.sh
+root        5345  0.0  0.0  11776  3280 pts/0    R+   22:19   0:00 ps aux --sort=-%mem
+root        1613  0.0  0.0 101624  2984 ?        S    20:27   0:00 (sd-pam)
+root        2958  0.0  0.0   3924  2832 ?        Ss   21:02   0:00 /bin/bash -c while true; do sleep 1000; done
+root        1235  0.0  0.0   8608  2716 ?        Ss   20:23   0:00 /usr/sbin/cron -f
+root        5324  0.0  0.0  21524  2588 ?        S    22:19   0:00 /lib/systemd/systemd-udevd
+root         928  0.0  0.0   7608  2452 tty4     Ss+  20:23   0:00 /usr/bin/less /var/log/cloud-init.log
+root        1493  0.0  0.0   2436  2376 ?        SLs  20:23   0:00 /usr/sbin/watchdog
+rdnssd       949  0.0  0.0   7712  1920 ?        S    20:23   0:00 /sbin/rdnssd -u rdnssd -H /etc/rdnssd/merge-hook
+root        5068  0.0  0.0   2484   904 ?        S    22:08   0:00 sleep 1000
+root         948  0.0  0.0   7236   852 ?        Ss   20:23   0:00 /sbin/rdnssd -u rdnssd -H /etc/rdnssd/merge-hook
+root         961  0.0  0.0   5136   532 ?        Ss   20:23   0:00 /usr/sbin/rpc.mountd --manage-gids
+root        5346  0.0  0.0   7260   504 pts/0    S+   22:19   0:00 head -n 200
+root         455  0.0  0.0   3056   172 ?        Ss   20:23   0:00 /usr/sbin/rpc.idmapd
+root         316  0.0  0.0   5228   168 ?        Ss   20:23   0:00 /usr/sbin/blkmapd
+root           2  0.0  0.0      0     0 ?        S    20:23   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   20:23   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   20:23   0:00 [rcu_par_gp]
+root           6  0.0  0.0      0     0 ?        I<   20:23   0:00 [kworker/0:0H-events_highpri]
+root           8  0.0  0.0      0     0 ?        I<   20:23   0:00 [mm_percpu_wq]
+root           9  0.0  0.0      0     0 ?        S    20:23   0:00 [rcu_tasks_rude_]
+root          10  0.0  0.0      0     0 ?        S    20:23   0:00 [rcu_tasks_trace]
+root          11  0.0  0.0      0     0 ?        S    20:23   0:00 [ksoftirqd/0]
+root          12  0.0  0.0      0     0 ?        I    20:23   0:00 [rcu_sched]
+root          13  0.0  0.0      0     0 ?        S    20:23   0:00 [migration/0]
+root          15  0.0  0.0      0     0 ?        S    20:23   0:00 [cpuhp/0]
+root          17  0.0  0.0      0     0 ?        S    20:23   0:00 [kdevtmpfs]
+root          18  0.0  0.0      0     0 ?        I<   20:23   0:00 [netns]
+root          19  0.0  0.0      0     0 ?        S    20:23   0:00 [kauditd]
+root          20  0.0  0.0      0     0 ?        S    20:23   0:00 [khungtaskd]
+root          21  0.0  0.0      0     0 ?        S    20:23   0:00 [oom_reaper]
+root          22  0.0  0.0      0     0 ?        I<   20:23   0:00 [writeback]
+root          23  0.0  0.0      0     0 ?        S    20:23   0:00 [kcompactd0]
+root          24  0.0  0.0      0     0 ?        SN   20:23   0:00 [ksmd]
+root          25  0.0  0.0      0     0 ?        SN   20:23   0:00 [khugepaged]
+root          43  0.0  0.0      0     0 ?        I<   20:23   0:00 [kintegrityd]
+root          44  0.0  0.0      0     0 ?        I<   20:23   0:00 [kblockd]
+root          45  0.0  0.0      0     0 ?        I<   20:23   0:00 [blkcg_punt_bio]
+root          46  0.0  0.0      0     0 ?        I<   20:23   0:00 [edac-poller]
+root          47  0.0  0.0      0     0 ?        I<   20:23   0:00 [devfreq_wq]
+root          48  0.0  0.0      0     0 ?        I<   20:23   0:00 [kworker/0:1H-kblockd]
+root          51  0.0  0.0      0     0 ?        S    20:23   0:00 [kswapd0]
+root          52  0.0  0.0      0     0 ?        I<   20:23   0:00 [kthrotld]
+root          53  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/24-aerdrv]
+root          54  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/25-aerdrv]
+root          55  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/26-aerdrv]
+root          56  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/27-aerdrv]
+root          57  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/28-aerdrv]
+root          58  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/29-aerdrv]
+root          59  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/30-aerdrv]
+root          60  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/31-aerdrv]
+root          61  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/32-aerdrv]
+root          62  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/33-aerdrv]
+root          63  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/34-aerdrv]
+root          64  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/35-aerdrv]
+root          65  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/36-aerdrv]
+root          66  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/37-aerdrv]
+root          67  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/38-aerdrv]
+root          68  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/39-aerdrv]
+root          69  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/40-aerdrv]
+root          70  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/41-aerdrv]
+root          71  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/42-aerdrv]
+root          72  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/43-aerdrv]
+root          73  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/44-aerdrv]
+root          74  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/45-aerdrv]
+root          75  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/46-aerdrv]
+root          76  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/47-aerdrv]
+root          77  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/48-aerdrv]
+root          78  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/49-aerdrv]
+root          79  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/50-aerdrv]
+root          80  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/51-aerdrv]
+root          81  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/52-aerdrv]
+root          82  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/53-aerdrv]
+root          83  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/54-aerdrv]
+root          84  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/55-aerdrv]
+root          85  0.0  0.0      0     0 ?        S    20:23   0:00 [irq/56-aerdrv]
+root          86  0.0  0.0      0     0 ?        I<   20:23   0:00 [acpi_thermal_pm]
+root          87  0.0  0.0      0     0 ?        I<   20:23   0:00 [ipv6_addrconf]
+root          97  0.0  0.0      0     0 ?        I<   20:23   0:00 [kstrp]
+root         100  0.0  0.0      0     0 ?        I<   20:23   0:00 [zswap-shrink]
+root         101  0.0  0.0      0     0 ?        I<   20:23   0:00 [kworker/u3:0-xprtiod]
+root         146  0.0  0.0      0     0 ?        I<   20:23   0:00 [ata_sff]
+root         148  0.0  0.0      0     0 ?        S    20:23   0:00 [scsi_eh_0]
+root         149  0.0  0.0      0     0 ?        I<   20:23   0:00 [scsi_tmf_0]
+root         150  0.0  0.0      0     0 ?        S    20:23   0:00 [scsi_eh_1]
+root         151  0.0  0.0      0     0 ?        I<   20:23   0:00 [scsi_tmf_1]
+root         152  0.0  0.0      0     0 ?        S    20:23   0:00 [scsi_eh_2]
+root         153  0.0  0.0      0     0 ?        I<   20:23   0:00 [scsi_tmf_2]
+root         154  0.0  0.0      0     0 ?        S    20:23   0:00 [scsi_eh_3]
+root         155  0.0  0.0      0     0 ?        I<   20:23   0:00 [scsi_tmf_3]
+root         156  0.0  0.0      0     0 ?        S    20:23   0:00 [scsi_eh_4]
+root         157  0.0  0.0      0     0 ?        I<   20:23   0:00 [scsi_tmf_4]
+root         159  0.0  0.0      0     0 ?        S    20:23   0:00 [scsi_eh_5]
+root         160  0.0  0.0      0     0 ?        I<   20:23   0:00 [scsi_tmf_5]
+root         167  0.0  0.0      0     0 ?        I    20:23   0:00 [kworker/0:3-cgroup_destroy]
+root         188  0.0  0.0      0     0 ?        I<   20:23   0:00 [md]
+root         198  0.0  0.0      0     0 ?        I<   20:23   0:00 [raid5wq]
+root         233  0.0  0.0      0     0 ?        S    20:23   0:00 [jbd2/vda2-8]
+root         234  0.0  0.0      0     0 ?        I<   20:23   0:00 [ext4-rsv-conver]
+root         248  0.0  0.0      0     0 ?        S    20:23   0:00 [hwrng]
+root         309  0.0  0.0      0     0 ?        I<   20:23   0:00 [rpciod]
+root         312  0.0  0.0      0     0 ?        I<   20:23   0:00 [xprtiod]
+root         399  0.0  0.0      0     0 ?        I<   20:23   0:00 [ixgbe]
+root         420  0.0  0.0      0     0 ?        S    20:23   0:00 [watchdogd]
+root         494  0.0  0.0      0     0 ?        I<   20:23   0:00 [cryptd]
+root         499  0.0  0.0      0     0 ?        I<   20:23   0:00 [ttm_swap]
+root         967  0.0  0.0      0     0 ?        I<   20:23   0:00 [kworker/u3:1-xprtiod]
+root         968  0.0  0.0      0     0 ?        I    20:23   0:00 [lockd]
+root        1227  0.0  0.0      0     0 ?        I    20:23   0:00 [nfsd]
+root        1228  0.0  0.0      0     0 ?        I    20:23   0:00 [nfsd]
+root        1229  0.0  0.0      0     0 ?        I    20:23   0:00 [nfsd]
+root        1230  0.0  0.0      0     0 ?        I    20:23   0:00 [nfsd]
+root        1231  0.0  0.0      0     0 ?        I    20:23   0:00 [nfsd]
+root        1232  0.0  0.0      0     0 ?        I    20:23   0:00 [nfsd]
+root        1233  0.0  0.0      0     0 ?        I    20:23   0:00 [nfsd]
+root        1234  0.0  0.0      0     0 ?        I    20:23   0:00 [nfsd]
+root        5053  0.0  0.0      0     0 ?        I    22:08   0:00 [kworker/u2:3-events_unbound]
+root        5178  0.0  0.0      0     0 ?        I    22:13   0:00 [kworker/u2:0-flush-254:0]
+root        5193  0.0  0.0      0     0 ?        I    22:14   0:00 [kworker/0:1-events]
