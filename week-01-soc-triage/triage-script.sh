@@ -82,4 +82,4 @@ chmod +x /tmp/triage.sh
 
 2) Copy the file to your host
 
-# scp root@<VULTR_IP>:/tmp/triage-myhost-20251025-235010.tar.gz .
+scp root@<VULTR_IP>:/tmp/triage-myhost-20251025-235010.tar.gz .
