@@ -1,6 +1,5 @@
-
-
 # 1) Create the script on the server
+
 cat > /tmp/triage.sh <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
@@ -79,3 +78,8 @@ ls -lh "${OUTDIR}.tar.gz"
 EOF
 
 chmod +x /tmp/triage.sh
+
+
+2) Copy the file to your host
+
+# scp root@<VULTR_IP>:/tmp/triage-myhost-20251025-235010.tar.gz .
