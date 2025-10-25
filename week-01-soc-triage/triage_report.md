@@ -64,12 +64,14 @@ At 2025-10-25 20:33:12 UTC, the test target observed a burst of failed SSH authe
     Oct 25 20:41:45 vultr sudo:     root : TTY=pts/0 ; PWD=/root/seclabs ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
     ...
 
-**Network (Wireshark)**: TCP streams show multiple SYN, SYN/ACK, RST; no completed SSH handshakes.
+
+## Run triage-script (triage.sh) (see the files in artifacts)
+
+<img width="705" height="438" alt="Screenshot 2025-10-26 at 12 31 19 AM" src="https://github.com/user-attachments/assets/1d462fc9-c56a-4450-8f10-390008fcdffe" />
 
 ## IOCs (synthetic)
 - Attacker IP: `10.0.0.5` (RFC1918 used for lab)  
 - Attempted usernames: `pentest-user`
-- Related log lines: see `week-01-soc-triage/artifacts/authlog-excerpt.txt`
 
 ## Actions taken / recommended containment
 1. Block source IP (`10.0.0.5`) at perimeter or host firewall.  
@@ -77,6 +79,7 @@ At 2025-10-25 20:33:12 UTC, the test target observed a burst of failed SSH authe
 3. Preserve evidence: collected triage archive `triage-20251025-1430.tar.gz` (hash: `SHA256: <redacted>`) — archived offline.  
 4. Tune detection: create SIEM rule to alert on >5 failed SSH attempts per 5 minutes (example Splunk query in `tshark-filters.txt`).  
 5. If public keys were used anywhere, rotate keys and review authorized_keys.
+
 
 
 ## Notes on data
