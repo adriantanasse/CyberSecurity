@@ -25,8 +25,8 @@ At 2025-10-25 20:33:12 UTC, the test target observed a burst of failed SSH authe
 ## Attacker
 Mac:sec-porto adriantanase$ TARGET=10.0.0.5; for i in {1..25}; do ssh -o ConnectTimeout=2 -o BatchMode=yes invaliduser@"$TARGET" 'echo hello' 2>/dev/null || true; done
 
+<img width="752" height="304" alt="Group 1 (1)" src="https://github.com/user-attachments/assets/8d62e532-e771-4f25-a06d-0bde80fbe261" />
 
-<img width="512" height="207" alt="Group 1 (1)" src="https://github.com/user-attachments/assets/1dcba541-4dd7-40f1-bb85-881c6562d175" />
 
 (If **pentest-user** will cause SSH to hang waiting for a password, add -o BatchMode=yes so ssh fails fast instead of prompting)
 
@@ -39,8 +39,7 @@ sudo grep "Failed password" /var/log/auth.log | tail -n 50
 
 ## Evidence (sanitized excerpts)
 **/var/log/auth.log** (excerpt, IPs anonymized):
-Oct 25 20:33:43 vultr sshd[1927]: Failed password for invalid user user from 2.57.121.25 port 26817 ssh2
-Oct 25 20:39:26 vultr sshd[2060]: Failed password for root from `10.0.0.5` port 42010 ssh2
+Oct 25 20:33:26 vultr sshd[2060]: Failed password for root from `10.0.0.5` port 42010 ssh2
 Oct 25 20:39:30 vultr sshd[2060]: Failed password for root from `10.0.0.5` port 42010 ssh2
 Oct 25 20:39:32 vultr sshd[2060]: Failed password for root from `10.0.0.5` port 42010 ssh2
 Oct 25 20:39:36 vultr sshd[2084]: Failed password for root from `10.0.0.5` port 14931 ssh2
