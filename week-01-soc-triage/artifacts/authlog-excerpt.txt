@@ -1,0 +1,52 @@
+Oct 25 16:08:02 vultr sshd[72824]: Invalid user pentest-user from 46.223.3.81 port 8934
+Oct 25 16:08:02 vultr sshd[72824]: Connection closed by invalid user pentest-user 46.223.3.81 port 8934 [preauth]
+Oct 25 16:08:02 vultr sshd[72826]: Invalid user pentest-user from 46.223.3.81 port 50335
+Oct 25 16:08:02 vultr sshd[72826]: Connection closed by invalid user pentest-user 46.223.3.81 port 50335 [preauth]
+Oct 25 16:08:02 vultr sshd[72828]: Invalid user pentest-user from 46.223.3.81 port 8933
+Oct 25 16:08:02 vultr sshd[72828]: Connection closed by invalid user pentest-user 46.223.3.81 port 8933 [preauth]
+Oct 25 16:08:02 vultr sshd[72830]: Invalid user pentest-user from 46.223.3.81 port 50351
+Oct 25 16:08:02 vultr sshd[72830]: Connection closed by invalid user pentest-user 46.223.3.81 port 50351 [preauth]
+Oct 25 16:08:03 vultr sshd[72832]: Invalid user pentest-user from 46.223.3.81 port 50366
+Oct 25 16:08:03 vultr sshd[72832]: Connection closed by invalid user pentest-user 46.223.3.81 port 50366 [preauth]
+Oct 25 16:08:03 vultr sshd[72834]: Invalid user pentest-user from 46.223.3.81 port 50367
+Oct 25 16:08:03 vultr sshd[72834]: Connection closed by invalid user pentest-user 46.223.3.81 port 50367 [preauth]
+Oct 25 16:08:03 vultr sshd[72836]: Invalid user pentest-user from 46.223.3.81 port 50334
+Oct 25 16:08:03 vultr sshd[72836]: Connection closed by invalid user pentest-user 46.223.3.81 port 50334 [preauth]
+Oct 25 16:08:03 vultr sshd[72838]: Invalid user pentest-user from 46.223.3.81 port 8941
+Oct 25 16:08:03 vultr sshd[72838]: Connection closed by invalid user pentest-user 46.223.3.81 port 8941 [preauth]
+Oct 25 16:08:04 vultr sshd[72840]: Invalid user pentest-user from 46.223.3.81 port 8942
+Oct 25 16:08:04 vultr sshd[72840]: Connection closed by invalid user pentest-user 46.223.3.81 port 8942 [preauth]
+Oct 25 16:08:04 vultr sshd[72842]: Invalid user pentest-user from 46.223.3.81 port 8943
+Oct 25 16:08:04 vultr sshd[72842]: Connection closed by invalid user pentest-user 46.223.3.81 port 8943 [preauth]
+Oct 25 16:08:04 vultr sshd[72844]: Invalid user pentest-user from 46.223.3.81 port 8944
+Oct 25 16:08:04 vultr sshd[72844]: Connection closed by invalid user pentest-user 46.223.3.81 port 8944 [preauth]
+Oct 25 16:08:04 vultr sshd[72846]: Invalid user pentest-user from 46.223.3.81 port 8945
+Oct 25 16:08:05 vultr sshd[72846]: Connection closed by invalid user pentest-user 46.223.3.81 port 8945 [preauth]
+Oct 25 16:08:05 vultr sshd[72848]: Invalid user pentest-user from 46.223.3.81 port 8946
+Oct 25 16:08:05 vultr sshd[72848]: Connection closed by invalid user pentest-user 46.223.3.81 port 8946 [preauth]
+Oct 25 16:08:05 vultr sshd[72850]: Invalid user pentest-user from 46.223.3.81 port 8947
+Oct 25 16:08:05 vultr sshd[72850]: Connection closed by invalid user pentest-user 46.223.3.81 port 8947 [preauth]
+Oct 25 16:08:05 vultr sshd[72852]: Invalid user pentest-user from 46.223.3.81 port 8948
+Oct 25 16:08:05 vultr sshd[72852]: Connection closed by invalid user pentest-user 46.223.3.81 port 8948 [preauth]
+Oct 25 16:08:06 vultr sshd[72854]: Invalid user pentest-user from 46.223.3.81 port 8903
+Oct 25 16:08:06 vultr sshd[72854]: Connection closed by invalid user pentest-user 46.223.3.81 port 8903 [preauth]
+Oct 25 16:08:06 vultr sshd[72856]: Invalid user pentest-user from 46.223.3.81 port 8950
+Oct 25 16:08:06 vultr sshd[72856]: Connection closed by invalid user pentest-user 46.223.3.81 port 8950 [preauth]
+Oct 25 16:08:06 vultr sshd[72858]: Invalid user pentest-user from 46.223.3.81 port 8956
+Oct 25 16:08:06 vultr sshd[72858]: Connection closed by invalid user pentest-user 46.223.3.81 port 8956 [preauth]
+Oct 25 16:08:06 vultr sshd[72860]: Invalid user pentest-user from 46.223.3.81 port 8913
+Oct 25 16:08:06 vultr sshd[72860]: Connection closed by invalid user pentest-user 46.223.3.81 port 8913 [preauth]
+Oct 25 16:08:07 vultr sshd[72862]: Invalid user pentest-user from 46.223.3.81 port 50323
+Oct 25 16:08:07 vultr sshd[72862]: Connection closed by invalid user pentest-user 46.223.3.81 port 50323 [preauth]
+Oct 25 16:08:07 vultr sshd[72864]: Invalid user pentest-user from 46.223.3.81 port 8921
+Oct 25 16:08:07 vultr sshd[72864]: Connection closed by invalid user pentest-user 46.223.3.81 port 8921 [preauth]
+Oct 25 16:08:07 vultr sshd[72866]: Invalid user pentest-user from 46.223.3.81 port 8922
+Oct 25 16:08:07 vultr sshd[72866]: Connection closed by invalid user pentest-user 46.223.3.81 port 8922 [preauth]
+Oct 25 16:08:07 vultr sshd[72868]: Invalid user pentest-user from 46.223.3.81 port 50324
+Oct 25 16:08:07 vultr sshd[72868]: Connection closed by invalid user pentest-user 46.223.3.81 port 50324 [preauth]
+Oct 25 16:08:08 vultr sshd[72870]: Invalid user pentest-user from 46.223.3.81 port 8924
+Oct 25 16:08:08 vultr sshd[72870]: Connection closed by invalid user pentest-user 46.223.3.81 port 8924 [preauth]
+Oct 25 16:08:08 vultr sshd[72872]: Invalid user pentest-user from 46.223.3.81 port 50326
+Oct 25 16:08:08 vultr sshd[72872]: Connection closed by invalid user pentest-user 46.223.3.81 port 50326 [preauth]
+Oct 25 16:08:10 vultr sudo: pam_unix(sudo:session): session closed for user root
+Oct 25 16:08:12 vultr sshd[72874]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=206.189.99.173  user=root
