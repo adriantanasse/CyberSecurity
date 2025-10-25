@@ -6,13 +6,12 @@
     vagrant init generic/debian12
 
 # Vagrantfile Configuration
-
-# Vagrant.configure("2") do |config|
+    Vagrant.configure("2") do |config|
     config.vm.provider "docker" do |d|
     # Use Debian 12 base image
     d.image = "roboxes/debian12:latest"
 
-   # Keep the container running
+ # Keep the container running
     d.remains_running = true 
     d.cmd = ["/bin/bash", "-c", "while true; do sleep 1000; done"]
 
@@ -20,7 +19,7 @@
     d.ports = ["2222:22"]
     end
   
-  # Install and enable SSH in the container
+# Install and enable SSH in the container
     config.vm.provision "shell", inline: <<-SHELL
     apt update -y
     apt install -y openssh-server sudo
