@@ -65,10 +65,6 @@ At 2025-10-25 20:33:12 UTC, the test target observed a burst of failed SSH authe
 4. Tune detection: create SIEM rule to alert on >5 failed SSH attempts per 5 minutes (example Splunk query in `tshark-filters.txt`).  
 5. If public keys were used anywhere, rotate keys and review authorized_keys.
 
-<img width="1277" height="726" alt="Screenshot 2025-10-25 at 2 41 11 AM" src="https://github.com/user-attachments/assets/1db57f2f-bfa3-448d-9117-4e5673cb13c9" />
-
-<img width="668" height="598" alt="Group 4 (2)" src="https://github.com/user-attachments/assets/33562b05-e314-49b2-ba7c-339748a04987" />
-
 
 ## Notes on data
 All logs and screenshots are sanitized to remove real IPs and any sensitive identifiers. This repository contains no customer data or private keys.
