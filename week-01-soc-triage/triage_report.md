@@ -6,6 +6,17 @@
 **Environment:** Local lab (MacOSx target VM (Vagrant) at `10.0.0.5` — NAT/host-only).  
 **Tools used:** tcpdump, Wireshark, tshark, Splunk Free, triage-script.sh
 
+**Goal:** capture network traffic, produce /var/log evidence for failed logins, inspect Windows event logs, ingest Linux logs into a local Splunk, and produce a 1-page triage note.
+
+**Pen-test Overview:**
+1. Create an Ubuntu VM (Vagrant) for a target host.
+2. (Optional) Bring up a Windows evaluation VM (for event logs).
+3. Use Wireshark and tshark to capture traffic on the host-only network.
+4. Generate SSH failed logins from an attacker VM (or Mac host).
+5. Run triage script on target Ubuntu to collect logs & artifacts.
+6. Install Splunk (local) and ingest `/var/log/auth.log` to make a basic detection rule for repeated SSH failures.
+
+
 ---
 
 ## Summary
