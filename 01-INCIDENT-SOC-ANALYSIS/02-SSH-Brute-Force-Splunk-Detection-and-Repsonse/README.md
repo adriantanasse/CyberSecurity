@@ -1,4 +1,4 @@
-# SOC Lab: SSH Brute Force Detection with Splunk
+# Detected and Responded to an SSH Brute-Force Attack Using Splunk>
 
 ## 📌 Overview
 
