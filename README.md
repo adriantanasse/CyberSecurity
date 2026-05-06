@@ -8,7 +8,7 @@ The goal of this portfolio is to demonstrate **practical, job-ready skills** in:
 
 - Threat detection & alert triage
 - Network traffic analysis (PCAP)
-- Detection engineering (Wazuh rules)
+- Detection engineering (Splunk/Wazuh rules)
 - Incident response & investigation workflows
 - Adversary simulation & attack analysis
 
@@ -16,7 +16,7 @@ All projects are designed to **simulate real-world attack scenarios**, moving be
 
 ⚙️ **Tools & Technologies**
 
-- SIEM: **Wazuh**
+- SIEM: **Splunk, Wazuh**
 - Network IDS: **Suricata**
 - Traffic Analysis: **Wireshark**, **tcpdump**
 - Attack Simulation: **Social-Engineer Toolkit (SET)**, **Kali Linux**
@@ -27,9 +27,10 @@ All projects are designed to **simulate real-world attack scenarios**, moving be
 ```
 01-INCIDENT-SOC-ANALYSIS/
 │
-├── 01-SSH-Brute-Force-Detection
-├── 02-DDoS-Traffic-Flood-Detection
-└── 03-Phishing-Email-Attack
+├── 01-SSH-Brute-Force-Wazuh-Detection-and-Response
+├── 02-SSH-Brute-Force-Splunk-Detection-and-Response
+├── 03-DDOS-Traffic-Flood-Detection
+└── 04-Phishing-Email-Attack
 
 02-MALWARE-PCAP-ANALYSIS/
 │
