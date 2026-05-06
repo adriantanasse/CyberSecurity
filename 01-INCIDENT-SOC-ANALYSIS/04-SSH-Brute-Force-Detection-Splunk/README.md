@@ -22,7 +22,7 @@ The attack is simulated using a controlled environment and analyzed in Splunk th
 
 ---
 
-## 🧠 Lab Architecture
+## Lab Architecture
 
 | Component      | Role                                      |
 | -------------- | ----------------------------------------- |
@@ -212,6 +212,64 @@ index=main source="alert:ssh_bruteforce"
 
 ---
 
+## Threat Narrative / Incident Report
+
+**Incident Summary**
+
+On May 6, 2026, a potential SSH brute-force attack was detected targeting the Ubuntu server. A high volume of failed login attempts was observed within short time intervals, triggering alerts in Splunk based on predefined detection thresholds.
+
+The activity pattern is consistent with an automated credential brute-force attack.
+
+**Detection Details**
+- Detection Method: SPL query with threshold-based logic
+- Trigger Condition: More than 5 failed login attempts per IP within 1 minute
+- SIEM Platform: Splunk
+
+![failed-pwd-splunk](screenshots/failed-pwd-splunk.png)
+
+**Affected Assets**
+- Target System: Ubuntu Server (SSH service)
+- Log Source: `/var/log/auth.log`
+- Log Ingestion: Splunk Universal Forwarder
+
+**Attacker Details**
+
+| Attribute        | Value                         |
+| ---------------- | ----------------------------- |
+| Source IP        | 192.168.69.2, 8.8.8.8         |
+| Attack Type      | SSH Brute Force               |
+| Failed Attempts  | 8–12 attempts per interval    |
+| Behavior Pattern | Rapid repeated login attempts |
+
+
+**Geolocation Intelligence**
+
+Using Splunk GeoIP enrichment:
+
+- Country: **United States**
+- City: **Mountain View**
+
+**Attack Timeline**
+- Initial Activity: **~12:00 PM**
+- Peak Activity: **~12:11 PM**
+- Alert Triggered: **Multiple times within minutes**
+- Duration: **Approximately 10 minutes**
+
+![test-alert-1-geo-on](screenshots/test-alert-1-geo-on.png)
+
+**Impact Assessment**
+- No successful login detected
+- No confirmed system compromise
+- Repeated unauthorized access attempts observed
+- Risk Level: Medium
+
+**Response Actions**
+- Identified malicious IP address(es)
+- Blocked attacker using **IPTABLES**
+- Continued monitoring via Splunk dashboard
+
+---
+
 ## SOC Workflow Demonstrated
 
 1. **Detection** — Identify brute-force behavior via log analysis
@@ -235,7 +293,7 @@ index=main source="alert:ssh_bruteforce"
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 * Automate IP blocking via Splunk alert actions
 * Integrate MITRE ATT&CK mapping (T1110 - Brute Force)
