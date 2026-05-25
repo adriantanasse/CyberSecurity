@@ -49,12 +49,12 @@ This project mirrors techniques commonly used during:
 
 ```text
 Kali Linux VM
-192.168.x.x
+192.168.178.73
         |
         |
         v
 Windows 10 Workstation
-192.168.x.x
+192.168.178.37
         |
         |
         v
@@ -72,7 +72,7 @@ Splunk Enterprise SIEM
 | CrackMapExec | SMB authentication & remote execution |
 | Hydra | Brute force testing |
 | Nmap | Service enumeration |
-| FreeRDP | RDP testing |
+| FreeRDP | RDP ports testing |
 
 ---
 
