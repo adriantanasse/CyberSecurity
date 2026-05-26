@@ -76,6 +76,7 @@ Splunk Enterprise SIEM
 | Tool | Purpose |
 |---|---|
 | **CrackMapExec** | SMB authentication & remote execution |
+| **Impacket** | Remote execution & lateral movement |
 | **Hydra** | Brute force testing |
 | **Nmap** | Service enumeration |
 | **FreeRDP** | RDP ports testing |
