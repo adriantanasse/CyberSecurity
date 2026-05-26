@@ -5,7 +5,11 @@
 
 # 📌 Project Overview
 
-**This project simulates a realistic Windows lateral movement intrusion scenario using:**
+**This lab simulates a realistic Windows lateral movement intrusion inside a controlled SOC environment using Kali Linux, Windows 10, Sysmon, and Splunk Enterprise.**
+
+The objective of the project was to generate real attacker telemetry, investigate malicious activity, and practice detection engineering using enterprise logging tools.**
+
+**The environment includes:**
 
 - Kali Linux as the attacker machine
 - Windows 10 as the victim workstation
@@ -13,7 +17,7 @@
 - Sysmon for advanced endpoint telemetry
 - Splunk Universal Forwarder for centralized log ingestion
 
-**The goal of the lab was to:**
+**The attack simulation mirrors techniques commonly observed during::**
 
 - Simulate attacker behavior
 - Generate realistic Windows telemetry
@@ -31,9 +35,9 @@
 
 ---
 
-# Lab Architecture
+### Lab Architecture
 
-## Environment
+#### Environment
 
 | Machine | Role |
 |---|---|
@@ -45,7 +49,7 @@
 
 ---
 
-# Network Layout
+### Network Layout
 
 ```text
 Kali Linux VM
@@ -63,9 +67,9 @@ Splunk Enterprise SIEM
 
 ---
 
-# Tools Used
+### Tools Used
 
-## Offensive Tools
+#### Offensive Tools
 
 | Tool | Purpose |
 |---|---|
@@ -76,7 +80,7 @@ Splunk Enterprise SIEM
 
 ---
 
-## Defensive Tools
+#### Defensive Tools
 
 | Tool | Purpose |
 |---|---|
@@ -86,9 +90,9 @@ Splunk Enterprise SIEM
 
 ---
 
-# Windows Logging Configuration
+### Windows Logging Configuration
 
-## Security Event Logging
+#### Security Event Logging
 
 Enabled logging for:
 
@@ -101,7 +105,7 @@ Enabled logging for:
 
 ---
 
-## Sysmon Logging
+#### Sysmon Logging
 
 Enabled:
 
@@ -113,7 +117,7 @@ Enabled:
 
 ---
 
-## PowerShell Logging
+#### PowerShell Logging
 
 Enabled:
 
@@ -122,17 +126,32 @@ Enabled:
 | 4104 | Script Block Logging |
 
 
-# Victim User Creation
+### Step 1 — Victim User Creation
 
-Created 3 new users on the Windows 10 Workstation to act as victims.
+Three new local users were created on the Windows 10 workstation to simulate realistic enterprise user accounts during the attack simulation.
+
+These accounts were later targeted during SMB authentication and remote execution testing.
+
 
 ![user-creation](screenshots/user-creation.png)
 
+**Why This Matters**
+
+Realistic user accounts allow authentication telemetry to closely resemble real enterprise attack activity. Attackers commonly target valid usernames during password spraying, brute force attempts, and lateral movement operations.
+
+Creating multiple users also improves detection testing for:
+
+- Failed authentication attempts
+- Successful logons
+- Account targeting patterns
+- Source IP correlation
+
+
 ---
 
-# SplunkForwarder Verification
+### Step 2 — Splunk Universal Forwarder Verification
 
-Verified SplunkForwarder running locally after installation and configuration using:
+The Splunk Universal Forwarder was verified locally after installation and configuration to ensure Windows logs were successfully being forwarded into Splunk Enterprise.
 
 ```ruby
 Get-Service SplunkForwarder
@@ -140,11 +159,21 @@ Get-Service SplunkForwarder
 
 ![splunkf-verification](screenshots/splunkf-verification.png)
 
+**Result**
+
+The SplunkForwarder service was confirmed running successfully.
+
+**Why This Matters**
+
+Without log forwarding, endpoint telemetry never reaches the SIEM platform. Verifying the forwarder ensures that authentication events, Sysmon logs, and process creation telemetry are centrally searchable during investigations.
+
+In real SOC environments, broken log forwarding creates major visibility gaps during incident response.
+
 ---
 
-# Sysmon Verification
+### Step 3 — Sysmon Telemetry Verification
 
-Verified Sysmon logging locally using:
+Sysmon logging was validated locally to confirm advanced endpoint telemetry was being generated correctly.
 
 ```ruby
 Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 5
@@ -152,56 +181,80 @@ Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 5
 
 ![winevent-create](screenshots/winevent-create.png)
 
+**Result**
+
 Successfully confirmed:
 
 - Process Create events
 - Network Connection events
 - Parent-child process telemetry
 
+**Why This Matters**
+
+Sysmon provides significantly deeper visibility than default Windows logging. It allows defenders to detect attacker behavior such as:
+
+- Remote command execution
+- PowerShell abuse
+- Suspicious parent-child relationships
+- Lateral movement activity
+
+Without Sysmon, many advanced attack techniques remain difficult to investigate.
+
 ---
 
-# Splunk Add-ons Installed
+### Step 4 — Splunk Add-on Installation
 
-Installed:
+**Installed:**
 
-- Splunk Add-on for Microsoft Sysmon
-- Splunk Add-on for Microsoft Windows
+- Splunk Add-on for Microsoft Sysmon ( https://splunkbase.splunk.com/app/5709 )
+- Splunk Add-on for Microsoft Windows ( https://splunkbase.splunk.com/app/742 )
 
-Benefits:
+**Benefits:**
 
+The add-ons provided:
 - Proper field extraction
 - CIM normalization
 - Better searches
 - Security dashboards
 
+**Why This Matters**
+
+Raw Windows logs can be difficult to analyze at scale. Proper field extraction and normalization allow analysts to build cleaner detections, reusable dashboards, and faster investigations.
+
+Detection engineering heavily depends on normalized telemetry.
+
 ---
 
-# Attack Simulation
+## Attack Simulation
 
-# 1. SMB Authentication Attack
+### Step 5 — SMB Authentication Attack Simulation
 
-Simulated attacker authentication attempts against the Windows workstation.
+SMB authentication attacks were simulated from the Kali Linux attacker machine against the Windows 10 workstation using CrackMapExec.
 
-## Command
+#### Attack Command on Kali
 
 ```ruby
-crackmapexec smb 192.168.x.x -u users.txt -p passwords.txt
+crackmapexec smb 192.168.178.37 -u users.txt -p passwords.txt
 ```
-
 ![img2-smb-attack](screenshots/img2-smb-attack.png)
 
-## Successful Authentication
+**Result**
+
+The attack generated both successful and failed authentication attempts against the Windows host.
+
+#### Successful Authentication Example
 
 ```bash
-crackmapexec smb 192.168.x.x -u helpdesk -p 'Password123!'
+crackmapexec smb 192.168.178.37 -u helpdesk -p 'Password123!'
 ```
 
 ![img3-success](screenshots/img3-success.png)
+
 ---
 
-# Telemetry Generated
+#### Telemetry Generated
 
-Generated:
+The attack generated:
 
 - Event ID 4624
 - Event ID 4625
@@ -211,7 +264,7 @@ Generated:
 
 ---
 
-# Sample Detection
+#### Detection Query in Splunk
 
 
 ```ruby
@@ -221,13 +274,24 @@ index=* EventCode=4625
 
 ![img3-failed-login](screenshots/img3-failed-login.png)
 
+**Why This Matters**
+
+Failed SMB authentication spikes are commonly associated with:
+
+- Password spraying
+- Brute force attacks
+- Credential stuffing
+- Initial access attempts
+
+Tracking source IP addresses and targeted usernames helps analysts identify attacker infrastructure and compromised accounts during investigations.
+
 ---
 
-# 2. Remote Command Execution
+### Step 6 — Remote Command Execution
 
-Simulated remote command execution over SMB.
+Remote command execution was simulated over SMB using CrackMapExec.
 
-## Command
+#### Attack Command on Kali
 
 ```ruby
 crackmapexec smb 192.168.178.37 -u helpdesk -p 'Password123!' -x "whoami"
@@ -235,20 +299,22 @@ crackmapexec smb 192.168.178.37 -u helpdesk -p 'Password123!' -x "whoami"
 
 ![img5-whoami](screenshots/img5-whoami.png)
 
----
+**Result**
 
-# Telemetry Generated
+The command executed remotely on the Windows system through service-based execution.
 
-Generated:
+**Telemetry Generated**
+
+The attack generated:
 
 - Sysmon Event ID 1
-- cmd.exe execution
-- services.exe parent-child chain
+- `cmd.exe` execution
+- `services.exe` parent-child chains
 - Remote process execution artifacts
 
 ---
 
-# Detection Query
+#### Detection Query
 
 ```ruby
 index=* EventCode=1
@@ -258,7 +324,7 @@ ParentImage="*services.exe"
 
 ---
 
-# Why This Detection Matters
+***Why This Detection Matters***
 
 This behavior is strongly associated with:
 
@@ -270,11 +336,11 @@ This behavior is strongly associated with:
 
 ---
 
-# 3. Encoded PowerShell Execution
+### Step 7 — Encoded PowerShell Execution
 
-Simulated attacker PowerShell execution.
+Encoded PowerShell execution was simulated to generate realistic attacker PowerShell telemetry.
 
-## Encoded PowerShell Command
+#### Encoded PowerShell Command
 
 ```ruby
 powershell -enc dwBoAG8AYQBtAGkA
@@ -284,28 +350,27 @@ powershell -enc dwBoAG8AYQBtAGkA
 
 ---
 
-# Remote Encoded PowerShell Execution
+#### Remote Execution Command on Kali
 
 ```ruby
 crackmapexec smb 192.168.x.x -u helpdesk -p 'Password123!' -x "powershell -enc dwBoAG8AYQBtAGkA"
 ```
+
 ![img11-powershell-command](screenshots/img11-powershell-command.png)
 
----
+**Telemetry Generated**
 
-# Telemetry Generated
+The attack generated:
 
-Generated:
-
-- powershell.exe execution
+- `powershell.exe` execution
 - Encoded command visibility
 - Sysmon process creation logs
 
 ---
 
-# PowerShell Detection Queries
+### PowerShell Detection Queries
 
-## Detect PowerShell Execution
+#### Detection Query — PowerShell Execution
 
 ```ruby
 index=* EventCode=1 Image="*powershell.exe"
@@ -316,7 +381,7 @@ index=* EventCode=1 Image="*powershell.exe"
 
 ---
 
-## Detect Encoded PowerShell
+#### Detection Query — Encoded PowerShell
 
 ```ruby
 index=* EventCode=1
@@ -326,16 +391,26 @@ Image="*powershell.exe"
 ```
 ![img20-enc-powershell](screenshots/img20-enc-powershell.png)
 
+**Why This Matters**
+
+Attackers commonly use encoded PowerShell commands to:
+
+- Obfuscate malicious payloads
+- Evade simple detections
+- Download malware
+- Execute fileless attacks
+
+Encoded PowerShell is considered a high-value hunting indicator in enterprise environments.
 
 ---
 
-# Process Creation Hunting
+### Step 8 — Process Creation Threat Hunting
 
----
+Threat hunting focused on identifying suspicious parent-child process relationships generated during lateral movement activity.
 
-# Important Parent-Child Relationships
+##### Important Parent-Child Relationships
 
-## services.exe → cmd.exe or other suspicious spawn
+`services.exe` → `cmd.exe` or other suspicious spawn
 
 Highly suspicious relationship commonly associated with:
 
@@ -346,7 +421,7 @@ Highly suspicious relationship commonly associated with:
 
 ---
 
-## Detection Query
+#### Detection Query
 
 ```ruby
 index=* EventCode=1
@@ -356,11 +431,24 @@ ParentImage="*services.exe"
 
 ![img20-parent-child](screenshots/img20-parent-child.png)
 
+**Why This Matters**
+
+This process relationship is highly suspicious and commonly associated with:
+
+- Lateral movement
+- Remote execution
+- PsExec-style execution
+- Administrative abuse
+
+Parent-child process analysis is one of the most valuable techniques in endpoint threat hunting because it reveals how processes were launched and what initiated them.
+
 ---
 
-# SMB Authentication Detection
+### Step 9 — SMB Authentication Detection
 
-## Successful SMB Logons
+Successful and failed SMB logons were investigated using **Windows Security Event Logs**.
+
+#### Successful SMB Logons Detection Query
 
 ```ruby
 index=* EventCode=4624 Logon_Type=3
@@ -373,25 +461,42 @@ index=* EventCode=4624 Logon_Type=3
 
 ![img7-login-success](screenshots/img7-login-success.png)
 
+**Why This Matters**
+
+Logon Type 3 events indicate remote network authentication activity. Analysts use these events to identify:
+
+- Lateral movement
+- Remote administrative access
+- Suspicious authentication sources
+- Potential compromised accounts
+
 ---
 
-## Failed SMB Logons
+#### Failed SMB Logons Detection Query
 
 ```ruby
 index=* EventCode=4625 Logon_Type=3
 | stats count by Source_Network_Address Account_Name
 | where count > 5
 ```
+
 ![img20-14-failed](screenshots/img20-14-failed.png)
 
 ![img20-view-events](screenshots/img20-view-events.png)
 
 ![img21-view-events2](screenshots/img21-view-events2.png)
 
+**Why This Matters**
+
+Multiple failed SMB logons from the same source are commonly associated with **brute force or password spraying attacks**.
+
+Repeated failures against multiple accounts often indicate **active attacker reconnaissance or credential attacks**.
 
 ---
 
-# Detect Successful Login After Failures
+### Step 10 — Detecting Successful Login After Failed Attempts
+
+A transaction-based Splunk search was used to identify successful logins occurring shortly after multiple failed authentication attempts.
 
 ```ruby
 index=* (EventCode=4624 OR EventCode=4625)
@@ -402,11 +507,23 @@ index=* (EventCode=4624 OR EventCode=4625)
 
 ![img20-maxspan](screenshots/img20-maxspan.png)
 
+**Why This Matters**
+
+This detection identifies a common attacker pattern:
+
+- Multiple failed password attempts
+- Eventual successful authentication
+- Potential account compromise
+
+Correlating failed and successful authentication events is a powerful technique for detecting credential attacks.
+
 ---
 
-# Threat Hunting Examples
+#### Threat Hunting Examples
 
-## Hunt PowerShell Abuse
+Additional threat hunting searches were used to investigate attacker behavior across the environment.
+
+#### Hunt PowerShell Abuse
 
 ```ruby
 index=* EventCode=1 Image="*powershell.exe"
@@ -414,7 +531,7 @@ index=* EventCode=1 Image="*powershell.exe"
 
 ---
 
-## Hunt Encoded Commands
+#### Hunt Encoded Commands
 
 ```ruby
 index=* EventCode=1 CommandLine="*-enc*"
@@ -422,7 +539,7 @@ index=* EventCode=1 CommandLine="*-enc*"
 
 ---
 
-## Hunt Lateral Movement
+#### Hunt Lateral Movement
 
 ```ruby
 index=* EventCode=1 ParentImage="*services.exe"
@@ -430,7 +547,7 @@ index=* EventCode=1 ParentImage="*services.exe"
 
 ---
 
-## Hunt Suspicious Parent-Child Chains
+#### Hunt Suspicious Parent-Child Chains
 
 ```ruby
 index=* EventCode=1
@@ -439,9 +556,21 @@ index=* EventCode=1
 | sort - count
 ```
 
+**Why This Matters**
+
+Threat hunting allows analysts to proactively identify malicious behavior before automated detections trigger alerts.
+
+These searches simulate real SOC workflows used to investigate:
+
+- Remote execution
+- PowerShell abuse
+- Administrative misuse
+- Ransomware precursor activity
+- Lateral movement behavior
+
 ---
 
-# Realistic SOC Detections Demonstrated
+## Realistic SOC Detections Demonstrated
 
 This lab successfully simulated and detected:
 
@@ -456,9 +585,9 @@ This lab successfully simulated and detected:
 
 ---
 
-# Key Detection Concepts Learned
+### Key Detection Concepts Learned
 
-## 1. Parent-Child Process Analysis
+#### 1. Parent-Child Process Analysis
 
 Understanding which process launched another process is critical for:
 
@@ -477,7 +606,7 @@ Examples:
 
 ---
 
-## 2. Sysmon Visibility
+#### 2. Sysmon Visibility
 
 Sysmon provided significantly better telemetry than default Windows logging, including:
 
@@ -489,7 +618,7 @@ Sysmon provided significantly better telemetry than default Windows logging, inc
 
 ---
 
-## 3. PowerShell Detection Challenges
+#### 3. PowerShell Detection Challenges
 
 Observed that:
 
@@ -498,7 +627,7 @@ Observed that:
 
 ---
 
-# MITRE ATT&CK Mapping
+## MITRE ATT&CK Mapping
 
 | Technique | Description |
 |---|---|
@@ -511,7 +640,7 @@ Observed that:
 
 ---
 
-# Skills Demonstrated
+## Skills Demonstrated
 
 - SIEM Engineering
 - Splunk Administration
@@ -527,9 +656,9 @@ Observed that:
 
 ---
 
-# Challenges Encountered
+## Challenges Encountered
 
-## RDP Limitations
+#### RDP Limitations
 
 The Windows target was Windows Home edition, which does not support inbound RDP hosting.
 
@@ -543,7 +672,7 @@ This still produced highly realistic attacker telemetry.
 
 ---
 
-## Network Troubleshooting
+#### Network Troubleshooting
 
 Resolved:
 
@@ -554,9 +683,9 @@ Resolved:
 
 ---
 
-# Lessons Learned
+## Lessons Learned
 
-## Importance of Endpoint Telemetry
+#### Importance of Endpoint Telemetry
 
 Without Sysmon, many attacker behaviors would have limited visibility.
 
@@ -568,7 +697,7 @@ Sysmon dramatically improved:
 
 ---
 
-## Realistic Detection Engineering
+#### Realistic Detection Engineering
 
 In this lab I have demonstrated that effective SOC monitoring depends on:
 
@@ -579,7 +708,7 @@ In this lab I have demonstrated that effective SOC monitoring depends on:
 
 ---
 
-# Future Improvements
+## Future Improvements
 
 Planned future enhancements:
 
@@ -595,7 +724,7 @@ Planned future enhancements:
 
 ---
 
-# Conclusion
+## Conclusion
 
 This project demonstrates practical SOC analyst and detection engineering capabilities through realistic attacker simulation and telemetry analysis.
 
