@@ -363,7 +363,7 @@ ParentImage="*services.exe"
 
 ```spl
 index=* EventCode=4624 Logon_Type=3
-| table _time host Account_Name Source_Network_Address Authentication_Package_Name
+| table _time host Account_Name Source_Network_Address Authentication_Package
 ```
 
 ![img20-success-logged](screenshots/img20-success-logged.png)
