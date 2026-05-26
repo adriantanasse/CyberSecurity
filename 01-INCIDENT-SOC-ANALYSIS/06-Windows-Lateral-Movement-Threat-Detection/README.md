@@ -37,11 +37,11 @@
 
 | Machine | Role |
 |---|---|
-| Kali Linux VM | Attacker |
-| Windows 10 Workstation | Victim |
-| Splunk Enterprise | SIEM |
-| Sysmon | Endpoint telemetry |
-| Splunk Universal Forwarder | Log forwarding |
+| Kali Linux VM | **Attacker** |
+| Windows 10 Workstation | **Victim** |
+| Splunk Enterprise | **SIEM** |
+| Sysmon | **Endpoint telemetry** |
+| Splunk Universal Forwarder | **Log forwarding** |
 
 ---
 
@@ -69,10 +69,10 @@ Splunk Enterprise SIEM
 
 | Tool | Purpose |
 |---|---|
-| CrackMapExec | SMB authentication & remote execution |
-| Hydra | Brute force testing |
-| Nmap | Service enumeration |
-| FreeRDP | RDP ports testing |
+| **CrackMapExec** | SMB authentication & remote execution |
+| **Hydra** | Brute force testing |
+| **Nmap** | Service enumeration |
+| **FreeRDP** | RDP ports testing |
 
 ---
 
@@ -80,9 +80,9 @@ Splunk Enterprise SIEM
 
 | Tool | Purpose |
 |---|---|
-| Sysmon | Advanced Windows telemetry |
-| Splunk Enterprise | SIEM platform |
-| Splunk Universal Forwarder | Log forwarding |
+| **Sysmon** | Advanced Windows telemetry |
+| **Splunk Enterprise** | SIEM platform |
+| **Splunk Universal Forwarder** | Log forwarding |
 
 ---
 
