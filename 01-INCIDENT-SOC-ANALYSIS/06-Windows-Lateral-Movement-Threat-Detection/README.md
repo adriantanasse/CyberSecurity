@@ -213,10 +213,12 @@ Generated:
 
 # Sample Detection
 
-```spl
+
+```ruby
 index=* EventCode=4625
 | stats count by Source_Network_Address Account_Name
 ```
+
 ![img3-failed-login](screenshots/img3-failed-login.png)
 
 ---
@@ -227,8 +229,8 @@ Simulated remote command execution over SMB.
 
 ## Command
 
-```bash
-crackmapexec smb 192.168.x.x -u helpdesk -p 'Password123!' -x "whoami"
+```ruby
+crackmapexec smb 192.168.178.37 -u helpdesk -p 'Password123!' -x "whoami"
 ```
 
 ![img5-whoami](screenshots/img5-whoami.png)
@@ -248,7 +250,7 @@ Generated:
 
 # Detection Query
 
-```spl
+```ruby
 index=* EventCode=1
 ParentImage="*services.exe"
 | table _time host ParentImage Image CommandLine User
@@ -274,7 +276,7 @@ Simulated attacker PowerShell execution.
 
 ## Encoded PowerShell Command
 
-```bash
+```ruby
 powershell -enc dwBoAG8AYQBtAGkA
 ```
 
@@ -284,7 +286,7 @@ powershell -enc dwBoAG8AYQBtAGkA
 
 # Remote Encoded PowerShell Execution
 
-```bash
+```ruby
 crackmapexec smb 192.168.x.x -u helpdesk -p 'Password123!' -x "powershell -enc dwBoAG8AYQBtAGkA"
 ```
 ![img11-powershell-command](screenshots/img11-powershell-command.png)
@@ -305,7 +307,7 @@ Generated:
 
 ## Detect PowerShell Execution
 
-```spl
+```ruby
 index=* EventCode=1 Image="*powershell.exe"
 | table _time host User ParentImage CommandLine
 ```
@@ -316,7 +318,7 @@ index=* EventCode=1 Image="*powershell.exe"
 
 ## Detect Encoded PowerShell
 
-```spl
+```ruby
 index=* EventCode=1
 Image="*powershell.exe"
 (CommandLine="*-enc*" OR CommandLine="*EncodedCommand*")
@@ -346,7 +348,7 @@ Highly suspicious relationship commonly associated with:
 
 ## Detection Query
 
-```spl
+```ruby
 index=* EventCode=1
 ParentImage="*services.exe"
 (Image="*cmd.exe" OR Image="*powershell.exe")
@@ -361,7 +363,7 @@ ParentImage="*services.exe"
 
 ## Successful SMB Logons
 
-```spl
+```ruby
 index=* EventCode=4624 Logon_Type=3
 | table _time host Account_Name Source_Network_Address Authentication_Package
 ```
@@ -376,7 +378,7 @@ index=* EventCode=4624 Logon_Type=3
 
 ## Failed SMB Logons
 
-```spl
+```ruby
 index=* EventCode=4625 Logon_Type=3
 | stats count by Source_Network_Address Account_Name
 | where count > 5
@@ -392,7 +394,7 @@ index=* EventCode=4625 Logon_Type=3
 
 # Detect Successful Login After Failures
 
-```spl
+```ruby
 index=* (EventCode=4624 OR EventCode=4625)
 | transaction Source_Network_Address maxspan=5m
 | search EventCode=4625 EventCode=4624
@@ -407,7 +409,7 @@ index=* (EventCode=4624 OR EventCode=4625)
 
 ## Hunt PowerShell Abuse
 
-```spl
+```ruby
 index=* EventCode=1 Image="*powershell.exe"
 ```
 
@@ -415,7 +417,7 @@ index=* EventCode=1 Image="*powershell.exe"
 
 ## Hunt Encoded Commands
 
-```spl
+```ruby
 index=* EventCode=1 CommandLine="*-enc*"
 ```
 
@@ -423,7 +425,7 @@ index=* EventCode=1 CommandLine="*-enc*"
 
 ## Hunt Lateral Movement
 
-```spl
+```ruby
 index=* EventCode=1 ParentImage="*services.exe"
 ```
 
@@ -431,7 +433,7 @@ index=* EventCode=1 ParentImage="*services.exe"
 
 ## Hunt Suspicious Parent-Child Chains
 
-```spl
+```ruby
 index=* EventCode=1
 (Image="*powershell.exe" OR Image="*cmd.exe")
 | stats count by ParentImage Image
