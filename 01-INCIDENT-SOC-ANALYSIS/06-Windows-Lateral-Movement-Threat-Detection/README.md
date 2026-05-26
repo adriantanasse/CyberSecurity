@@ -121,25 +121,24 @@ Enabled:
 |---|---|
 | 4104 | Script Block Logging |
 
+
+# Victim User Creation
+
+Created 3 new users to act as victims.
+
+![user-creation](screenshots/user-creation.png)
+
 ---
 
-# Splunk Universal Forwarder Configuration
+# SplunkForwarder Verification
 
-## inputs.conf
+Verified SplunkForwarder running locally after installation and configuration using:
 
-```ini
-[WinEventLog://Security]
-disabled = 0
-
-[WinEventLog://Microsoft-Windows-Sysmon/Operational]
-disabled = 0
-renderXml = false
-current_only = 0
-
-[WinEventLog://Microsoft-Windows-PowerShell/Operational]
-disabled = 0
-renderXml = false
+```powershell
+Get-Service SplunkForwarder
 ```
+
+![splunkf-verification](screenshots/splunkf-verification.png)
 
 ---
 
@@ -150,6 +149,8 @@ Verified Sysmon logging locally using:
 ```powershell
 Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 5
 ```
+
+![winevent-create](screenshots/winevent-create.png)
 
 Successfully confirmed:
 
@@ -252,7 +253,6 @@ index=* EventCode=1
 ParentImage="*services.exe"
 | table _time host ParentImage Image CommandLine User
 ```
-
 
 ---
 
@@ -495,8 +495,6 @@ Observed that:
 - Not all remote PowerShell executions generated Event ID 4104
 - Sysmon Event ID 1 still provided strong visibility into PowerShell activity
 
-This reflects real-world detection engineering challenges.
-
 ---
 
 # MITRE ATT&CK Mapping
@@ -571,7 +569,7 @@ Sysmon dramatically improved:
 
 ## Realistic Detection Engineering
 
-This lab demonstrated that effective SOC monitoring depends on:
+In this lab I have demonstrated that effective SOC monitoring depends on:
 
 - Strong telemetry
 - Contextual process analysis
@@ -610,7 +608,7 @@ The lab successfully reproduced:
 
 using Splunk and Sysmon in a Windows environment.
 
-This project strengthened hands-on experience with:
+This project strengthened my hands-on experience with:
 
 - SIEM operations
 - Endpoint monitoring
