@@ -3,7 +3,7 @@
 
 ---
 
-# Project Overview
+# 📌 Project Overview
 
 This project simulates a realistic Windows lateral movement intrusion scenario using:
 
@@ -134,7 +134,7 @@ Created 3 new users to act as victims.
 
 Verified SplunkForwarder running locally after installation and configuration using:
 
-```powershell
+```ruby
 Get-Service SplunkForwarder
 ```
 
@@ -146,7 +146,7 @@ Get-Service SplunkForwarder
 
 Verified Sysmon logging locally using:
 
-```powershell
+```ruby
 Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 5
 ```
 
@@ -184,7 +184,7 @@ Simulated attacker authentication attempts against the Windows workstation.
 
 ## Command
 
-```bash
+```ruby
 crackmapexec smb 192.168.x.x -u users.txt -p passwords.txt
 ```
 
