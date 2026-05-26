@@ -1,102 +1,131 @@
-## SOC Portfolio | Detection, Investigation & Threat Analysis
+# 🛡️ SOC Analyst Portfolio
 
-### 📌 Overview
+Focused on practical blue-team operations, threat detection, incident investigation, and security monitoring using enterprise SIEM platforms.
 
-This repository showcases **hands-on Security Operations Center (SOC) projects** focused on threat detection, incident investigation, and behavioral analysis.
+Hands-on cybersecurity projects focused on:
 
-The goal of this portfolio is to demonstrate **practical, job-ready skills** in:
+- Threat Detection
+- Incident Response
+- Detection Engineering
+- Malware Traffic Analysis
+- Threat Hunting
+- SIEM Investigation
 
-- Threat detection & alert triage
-- Network traffic analysis (PCAP)
-- Detection engineering (Splunk/Wazuh rules)
-- Incident response & investigation workflows
-- Adversary simulation & attack analysis
+This portfolio demonstrates practical SOC analyst skills through realistic attack simulations, behavioral analysis, and detection workflows using enterprise security tools.
 
-All projects are designed to **simulate real-world attack scenarios**, moving beyond theory into **practical SOC operations**.
+---
 
-⚙️ **Tools & Technologies**
+# ⚙️ Technologies & Tools
 
-- SIEM: **Splunk, Wazuh**
-- Network IDS: **Suricata**
-- Traffic Analysis: **Wireshark**, **tcpdump**
-- Attack Simulation: **Social-Engineer Toolkit (SET)**, **Kali Linux**
-- Log Analysis: **Linux CLI**, **JSON logs**
-- Scripting: **Python** (basic automation & analysis)
+### SIEM & Detection
+- Splunk
+- Wazuh
+- Sysmon
+- Suricata
 
-📂 **Repository Structure**
-```
-01-INCIDENT-SOC-ANALYSIS/
+### Traffic & Malware Analysis
+- Wireshark
+- tcpdump
+- PCAP Analysis
+
+### Offensive Security & Simulation
+- Kali Linux
+- Social-Engineer Toolkit (SET)
+- Hydra
+- Custom Attack Simulation
+
+### Systems & Scripting
+- Linux CLI
+- Windows Event Logs
+- Python Automation
+- JSON Log Analysis
+
+---
+
+# 🔵 SOC Detection Engineering
+
+```text
+01-SOC-DETECTION-ENGINEERING/
 │
-├── 01-SSH-Brute-Force-Wazuh-Detection-and-Response
-├── 02-SSH-Brute-Force-Splunk-Detection-and-Response
-├── 03-DDOS-Traffic-Flood-Detection
-└── 04-Phishing-Email-Attack
-
-02-MALWARE-PCAP-ANALYSIS/
-│
-├── 01-IcedID-PCAP-Analysis
-├── 02-Netsupport-RAT-PCAP-Analysis
-└── 03-STRRAT-PCAP-Analysis
-
-03-SCRIPTS/
-
-README.md
-
+├── 01-SSH-Brute-Force-Detection-Wazuh
+├── 02-SSH-Brute-Force-Detection-Splunk
+├── 03-DDoS-Traffic-Analysis-and-Detection
+├── 04-Phishing-Incident-Analysis
+├── 05-Azure-Cloud-Threat-Detection
+├── 06-Windows-Lateral-Movement-Detection
 ```
 
-🔍 **Project Highlights**
-- Incident-Based SOC Investigations
+---
 
-**Realistic attack simulations** with full investigation workflows:
+# 🔴 Malware Traffic Analysis
 
-🔐 **SSH Brute Force Detection**
-- Identified repeated failed login attempts
-- Correlated authentication logs
-- Detected attacker IP patterns
-- Created alerting logic for brute-force behavior
+```text
+02-MALWARE-TRAFFIC-ANALYSIS/
+│
+├── 01-IcedID-Network-Traffic-Analysis
+├── 02-NetSupport-RAT-Traffic-Analysis
+├── 03-STRRAT-Malware-Traffic-Analysis
+```
 
-🌐 **DDoS Traffic Flood Detection**
-- Analyzed abnormal traffic spikes
-- Detected high request frequency patterns
-- Tuned detection thresholds in Wazuh
-- Investigated network-level indicators
-  
-🎣 **Phishing Attack Investigation**
-- Simulated phishing attack using SET (Social-Engineer Toolkit)
-- Captured credentials via a fake login portal
-- Detected malicious HTTP traffic using Suricata
-- Built custom behavior-based Wazuh rules:
-- Suspicious Python HTTP server detection
-- Credential submission (POST request) detection
-- Correlation rule confirming phishing activity
-  
-🦠 **Malware PCAP Analysis**
+---
 
-Deep packet-level investigations of real malware traffic:
+# 🚨 Detection Engineering & Incident Response
 
-**IcedID Analysis**
-- Identified C2 communication patterns
+## 🔐 SSH Brute Force Detection
+- Detected repeated failed authentication attempts
+- Correlated attacker IP activity
+- Built SIEM alerting logic
+- Investigated brute-force attack patterns
+
+## 🌐 DDoS Traffic Analysis
+- Investigated abnormal traffic spikes
+- Analyzed network flood behavior
+- Tuned Wazuh detection thresholds
+- Identified traffic anomalies
+
+## 🎣 Phishing Incident Investigation
+- Simulated phishing infrastructure using SET
+- Captured credential submission traffic
+- Built custom Wazuh detection rules
+- Detected malicious POST request activity
+- Correlated phishing indicators
+
+---
+
+# 🦠 Malware Traffic Investigations
+
+## IcedID Analysis
+- Identified C2 beaconing behavior
 - Extracted indicators of compromise (IOCs)
-- Analyzed HTTP/HTTPS beaconing behavior
+- Analyzed HTTP/HTTPS communications
 
-**Netsupport RAT Analysis**
-- Detected remote access activity
-- Identified suspicious connections and ports
-- Tracked attacker communication flow
+## NetSupport RAT Analysis
+- Investigated remote access traffic
+- Detected suspicious outbound connections
+- Tracked attacker communication patterns
 
-**STRRAT Analysis**
-- Investigated malicious traffic signatures
-- Identified payload delivery mechanisms
+## STRRAT Analysis
+- Investigated malware delivery mechanisms
+- Identified malicious traffic signatures
 - Mapped infection behavior
 
-**Each project follows a structured SOC workflow:**
-1. Alert Triggered
-2. Initial Triage
-3. Log & Traffic Analysis
-4. Threat Identification
-5. Correlation of Events
-6. Conclusion & Impact Assessment
+---
 
-**Contact**
+# 🎯 Skills Demonstrated
 
-If you're hiring for a SOC Analyst or Junior Cybersecurity role, feel free to reach out.
+- Threat Detection Engineering
+- SIEM Analysis
+- Incident Response
+- Threat Hunting
+- Malware Traffic Analysis
+- IOC Extraction
+- Network Traffic Analysis
+- Log Correlation
+- Behavioral Detection
+- MITRE ATT&CK Mapping
+
+---
+
+# 📬 Contact
+
+If you're hiring for SOC Analyst, Threat Detection, or Blue Team roles, feel free to connect.
