@@ -3,13 +3,31 @@
 
 ---
 
-![splunk-dash](screenshots/splunk-dash.png)
+![project-header](screenshots/project-header.png)
 
 # 📌 Project Overview
 
 **This lab simulates a realistic Windows lateral movement intrusion inside a controlled SOC environment using Kali Linux, Windows 10, Sysmon, and Splunk Enterprise.**
 
 The objective of the project was to generate real attacker telemetry, investigate malicious activity, and practice detection engineering using enterprise logging tools.
+
+## Real-World Threat Actor Reference — SolarWinds / APT29
+
+This lab simulates several techniques commonly observed in real-world intrusions such as the **SolarWinds Compromise conducted by APT29**.
+
+Although this project is a controlled lab environment, the lateral movement and remote execution activity generated in Splunk **closely mirrors attacker behavior** documented during the SolarWinds intrusion.
+
+| Technique                          | MITRE ATT&CK                | Lab Simulation                                     |
+| ---------------------------------- | --------------------------- | -------------------------------------------------- |
+| SMB / Admin Share Lateral Movement | T1021.002                   | CrackMapExec remote execution                      |
+| Remote Service Execution           | T1569.002                   | `services.exe` spawning remote payloads            |
+| PowerShell Execution               | T1059.001                   | Encoded PowerShell commands                        |
+| Windows Command Shell              | T1059.003                   | `cmd.exe` execution                                |
+| Valid Accounts                     | T1078                       | Authenticated SMB logons                           |
+| Remote Command Execution           | T1047 / T1021               | Remote process creation over SMB                   |
+| Suspicious Parent-Child Chains     | Defense Evasion / Execution | `services.exe → random.exe/cmd.exe/powershell.exe` |
+
+Reference: https://attack.mitre.org/campaigns/C0024/#:~:text=Victims%20of%20this%20campaign%20included%20government 
 
 **The environment includes:**
 
