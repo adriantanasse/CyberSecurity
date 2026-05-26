@@ -580,7 +580,7 @@ Impacket PsExec
 CrackMapExec
 SMBExec
 PsExec-style ransomware behavior
-```sql
+```
 
 **The alert correlates:**
 
