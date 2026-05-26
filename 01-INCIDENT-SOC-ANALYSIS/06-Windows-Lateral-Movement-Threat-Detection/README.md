@@ -124,7 +124,7 @@ Enabled:
 
 # Victim User Creation
 
-Created 3 new users to act as victims.
+Created 3 new users on the Windows 10 Workstation to act as victims.
 
 ![user-creation](screenshots/user-creation.png)
 
