@@ -5,7 +5,7 @@
 
 # 📌 Project Overview
 
-This project simulates a realistic Windows lateral movement intrusion scenario using:
+**This project simulates a realistic Windows lateral movement intrusion scenario using:**
 
 - Kali Linux as the attacker machine
 - Windows 10 as the victim workstation
@@ -13,7 +13,7 @@ This project simulates a realistic Windows lateral movement intrusion scenario u
 - Sysmon for advanced endpoint telemetry
 - Splunk Universal Forwarder for centralized log ingestion
 
-The goal of the lab was to:
+**The goal of the lab was to:**
 
 - Simulate attacker behavior
 - Generate realistic Windows telemetry
@@ -21,7 +21,7 @@ The goal of the lab was to:
 - Perform threat hunting using Sysmon and Windows Event Logs
 - Build practical SOC analyst and detection engineering skills
 
-This project mirrors techniques commonly used during:
+**This project mirrors techniques commonly used during:**
 
 - Ransomware intrusions
 - Internal network compromise
