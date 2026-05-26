@@ -609,8 +609,9 @@ PsExec-style ransomware behavior
 
 **Detection Logic**
 
-```sql
 The following SPL query was used:
+
+```sql
 index=* (
 (EventCode=4624 Logon_Type=3 Authentication_Package=NTLM)
 OR EventCode=1
