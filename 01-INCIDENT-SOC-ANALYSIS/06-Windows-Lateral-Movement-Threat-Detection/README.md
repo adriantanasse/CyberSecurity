@@ -335,7 +335,7 @@ Image="*powershell.exe"
 
 # Important Parent-Child Relationships
 
-## services.exe → cmd.exe
+## services.exe → cmd.exe or other suspicious spawn
 
 Highly suspicious relationship commonly associated with:
 
@@ -351,7 +351,6 @@ Highly suspicious relationship commonly associated with:
 ```ruby
 index=* EventCode=1
 ParentImage="*services.exe"
-(Image="*cmd.exe" OR Image="*powershell.exe")
 | table _time host User ParentImage Image CommandLine
 ```
 
