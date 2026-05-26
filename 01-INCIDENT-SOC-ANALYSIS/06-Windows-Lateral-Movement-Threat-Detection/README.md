@@ -416,14 +416,7 @@ Threat hunting focused on identifying suspicious parent-child process relationsh
 
 ##### Important Parent-Child Relationships
 
-`services.exe` → `cmd.exe` or other suspicious spawn
-
-Highly suspicious relationship commonly associated with:
-
-- Lateral movement
-- Remote execution
-- PsExec-style execution
-- Administrative abuse
+`services.exe` → `cmd.exe` or other random EXE files
 
 ---
 
@@ -482,16 +475,7 @@ NOT:
 C:\Windows\random.exe
 ```
 
-**Impacket attack first does**
-
-services.exe
-   └── random.exe
-
-NOT immediately:
-
-services.exe → cmd.exe
-
-The random EXE THEN launches cmd/powershell internally.
+The *random* EXE THEN launches cmd/powershell internally.
    
 **Randomly named executables** under Windows directory spawned by `services.exe` are **HIGHLY suspicious**.
 
@@ -510,7 +494,7 @@ Parent-child process analysis is one of the most valuable techniques in endpoint
 
 ### Step 9 — SMB Authentication Detection
 
-Successful and failed SMB logons were investigated using **Windows Security Event Logs**.
+**Successful and failed SMB logons** were investigated using **Windows Security Event Logs**.
 
 #### Successful SMB Logons Detection Query
 
@@ -527,7 +511,9 @@ index=* EventCode=4624 Logon_Type=3
 
 **Why This Matters**
 
-Logon Type 3 events indicate remote network authentication activity. Analysts use these events to identify:
+**Logon Type 3** events indicate **remote network authentication activity**. 
+
+We can use these events to identify:
 
 - Lateral movement
 - Remote administrative access
@@ -622,7 +608,7 @@ index=* EventCode=1
 
 **Why This Matters**
 
-Threat hunting allows analysts to proactively identify malicious behavior before automated detections trigger alerts.
+**Threat hunting** allows us to proactively identify malicious behavior before automated detections trigger alerts.
 
 These searches simulate real SOC workflows used to investigate:
 
@@ -644,7 +630,7 @@ A full professional incident report was written documenting this investigation:
 
 ## Realistic SOC Detections Demonstrated
 
-This lab successfully simulated and detected:
+This lab **successfully simulated and detected**:
 
 - SMB authentication attacks
 - Password spraying behavior
@@ -667,7 +653,7 @@ Understanding which process launched another process is critical for:
 - Threat hunting
 - Lateral movement detection
 
-Examples:
+**Examples:**
 
 | Parent Process | Child Process | Meaning |
 |---|---|---|
@@ -675,6 +661,12 @@ Examples:
 | services.exe | powershell.exe | Lateral movement |
 | explorer.exe | cmd.exe | User interactive shell |
 | winword.exe | powershell.exe | Potential phishing |
+
+**Or, in our case:**
+
+| Parent Process | Child Process | Meaning |
+|---|---|---|
+| services.exe | random.exe | The random EXE THEN launches cmd/powershell internally. |
 
 ---
 
@@ -694,8 +686,8 @@ Sysmon provided significantly better telemetry than default Windows logging, inc
 
 Observed that:
 
-- Not all remote PowerShell executions generated Event ID 4104
-- Sysmon Event ID 1 still provided strong visibility into PowerShell activity
+- Not all remote PowerShell executions generated `Event ID 4104`
+- Sysmon `Event ID 1` still provided strong visibility into PowerShell activity
 
 ---
 
