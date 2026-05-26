@@ -125,13 +125,19 @@ Enabled:
 |---|---|
 | 4104 | Script Block Logging |
 
+---
+
+## Incident Response Process (NIST Framework)
+
+This investigation follows the NIST Incident Response Framework: **Preparation → Detection → Analysis → Containment → Eradication → Recovery → Lessons Learned**
+
+---
 
 ### Step 1 — Victim User Creation
 
 Three new local users were created on the Windows 10 workstation to simulate realistic enterprise user accounts during the attack simulation.
 
 These accounts were later targeted during SMB authentication and remote execution testing.
-
 
 ![user-creation](screenshots/user-creation.png)
 
@@ -153,7 +159,7 @@ Creating multiple users also improves detection testing for:
 
 The Splunk Universal Forwarder was verified locally after installation and configuration to ensure Windows logs were successfully being forwarded into Splunk Enterprise.
 
-```ruby
+```powershell
 Get-Service SplunkForwarder
 ```
 
@@ -175,7 +181,7 @@ In real SOC environments, broken log forwarding creates major visibility gaps du
 
 Sysmon logging was validated locally to confirm advanced endpoint telemetry was being generated correctly.
 
-```ruby
+```powershell
 Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 5
 ```
 
@@ -233,7 +239,7 @@ SMB authentication attacks were simulated from the Kali Linux attacker machine a
 
 #### Attack Command on Kali
 
-```ruby
+```python
 crackmapexec smb 192.168.178.37 -u users.txt -p passwords.txt
 ```
 ![img2-smb-attack](screenshots/img2-smb-attack.png)
@@ -244,7 +250,7 @@ The attack generated both successful and failed authentication attempts against 
 
 #### Successful Authentication Example
 
-```bash
+```python
 crackmapexec smb 192.168.178.37 -u helpdesk -p 'Password123!'
 ```
 
@@ -267,7 +273,7 @@ The attack generated:
 #### Detection Query in Splunk
 
 
-```ruby
+```sql
 index=* EventCode=4625
 | stats count by Source_Network_Address Account_Name
 ```
@@ -293,7 +299,7 @@ Remote command execution was simulated over SMB using CrackMapExec.
 
 #### Attack Command on Kali
 
-```ruby
+```sql
 crackmapexec smb 192.168.178.37 -u helpdesk -p 'Password123!' -x "whoami"
 ```
 
@@ -316,7 +322,7 @@ The attack generated:
 
 #### Detection Query
 
-```ruby
+```sql
 index=* EventCode=1
 ParentImage="*services.exe"
 | table _time host ParentImage Image CommandLine User
@@ -342,7 +348,7 @@ Encoded PowerShell execution was simulated to generate realistic attacker PowerS
 
 #### Encoded PowerShell Command
 
-```ruby
+```sql
 powershell -enc dwBoAG8AYQBtAGkA
 ```
 
@@ -352,7 +358,7 @@ powershell -enc dwBoAG8AYQBtAGkA
 
 #### Remote Execution Command on Kali
 
-```ruby
+```python
 crackmapexec smb 192.168.x.x -u helpdesk -p 'Password123!' -x "powershell -enc dwBoAG8AYQBtAGkA"
 ```
 
@@ -372,7 +378,7 @@ The attack generated:
 
 #### Detection Query — PowerShell Execution
 
-```ruby
+```sql
 index=* EventCode=1 Image="*powershell.exe"
 | table _time host User ParentImage CommandLine
 ```
@@ -383,7 +389,7 @@ index=* EventCode=1 Image="*powershell.exe"
 
 #### Detection Query — Encoded PowerShell
 
-```ruby
+```sql
 index=* EventCode=1
 Image="*powershell.exe"
 (CommandLine="*-enc*" OR CommandLine="*EncodedCommand*")
@@ -423,7 +429,7 @@ Highly suspicious relationship commonly associated with:
 
 #### Detection Query
 
-```ruby
+```sql
 index=* EventCode=1
 ParentImage="*services.exe"
 | table _time host User ParentImage Image CommandLine
@@ -450,7 +456,7 @@ Successful and failed SMB logons were investigated using **Windows Security Even
 
 #### Successful SMB Logons Detection Query
 
-```ruby
+```sql
 index=* EventCode=4624 Logon_Type=3
 | table _time host Account_Name Source_Network_Address Authentication_Package
 ```
@@ -474,7 +480,7 @@ Logon Type 3 events indicate remote network authentication activity. Analysts us
 
 #### Failed SMB Logons Detection Query
 
-```ruby
+```sql
 index=* EventCode=4625 Logon_Type=3
 | stats count by Source_Network_Address Account_Name
 | where count > 5
@@ -498,7 +504,7 @@ Repeated failures against multiple accounts often indicate **active attacker rec
 
 A transaction-based Splunk search was used to identify successful logins occurring shortly after multiple failed authentication attempts.
 
-```ruby
+```sql
 index=* (EventCode=4624 OR EventCode=4625)
 | transaction Source_Network_Address maxspan=5m
 | search EventCode=4625 EventCode=4624
@@ -525,7 +531,7 @@ Additional threat hunting searches were used to investigate attacker behavior ac
 
 #### Hunt PowerShell Abuse
 
-```ruby
+```sql
 index=* EventCode=1 Image="*powershell.exe"
 ```
 
@@ -533,7 +539,7 @@ index=* EventCode=1 Image="*powershell.exe"
 
 #### Hunt Encoded Commands
 
-```ruby
+```sql
 index=* EventCode=1 CommandLine="*-enc*"
 ```
 
@@ -541,7 +547,7 @@ index=* EventCode=1 CommandLine="*-enc*"
 
 #### Hunt Lateral Movement
 
-```ruby
+```sql
 index=* EventCode=1 ParentImage="*services.exe"
 ```
 
@@ -549,7 +555,7 @@ index=* EventCode=1 ParentImage="*services.exe"
 
 #### Hunt Suspicious Parent-Child Chains
 
-```ruby
+```sql
 index=* EventCode=1
 (Image="*powershell.exe" OR Image="*cmd.exe")
 | stats count by ParentImage Image
@@ -567,6 +573,14 @@ These searches simulate real SOC workflows used to investigate:
 - Administrative misuse
 - Ransomware precursor activity
 - Lateral movement behavior
+
+---
+
+## Incident Report
+
+A full professional incident report was written documenting this investigation:
+
+[06-Windows-Lateral-Movement-Threat-Detection-Incident-Report.docx](https://docs.google.com/document/d/1upSjokH7R2VhPuXA--MRjiTWu2jdpNYn/edit)
 
 ---
 
