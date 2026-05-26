@@ -437,6 +437,64 @@ ParentImage="*services.exe"
 
 ![img20-parent-child](screenshots/img20-parent-child.png)
 
+
+
+**Even better detection**
+
+```sql
+index=* EventCode=1
+ParentImage="*services.exe"
+(
+Image="C:\\Windows\\*.exe"
+OR Image="*cmd.exe"
+OR Image="*powershell.exe"
+)
+| table _time host User ParentImage Image CommandLine
+| sort - _time
+```
+Detect suspicious executables launched from Windows directory:
+
+![lat-mov-better](screenshots/lat-mov-better.png)
+
+**Result**
+
+Threat hunting identified suspicious service-based execution where `services.exe` ***spawned a randomly named executable under the Windows directory***. This behavior closely resembles ***PsExec/Impacket lateral movement*** commonly associated with ransomware operations and remote administrative abuse.
+
+**In Our Case:**
+
+```
+damtcNZ1.exe
+RTMjpVsy.exe
+bWHweAHp.exe
+```
+
+**Why This Is Suspicious**
+
+Legitimate Windows services usually launch:
+
+```
+svchost.exe
+dllhost.exe
+service binaries in Program Files
+```
+NOT:
+```
+C:\Windows\random.exe
+```
+
+**Impacket attack first does**
+
+services.exe
+   └── random.exe
+
+NOT immediately:
+
+services.exe → cmd.exe
+
+The random EXE THEN launches cmd/powershell internally.
+   
+**Randomly named executables** under Windows directory spawned by `services.exe` are **HIGHLY suspicious**.
+
 **Why This Matters**
 
 This process relationship is highly suspicious and commonly associated with:
