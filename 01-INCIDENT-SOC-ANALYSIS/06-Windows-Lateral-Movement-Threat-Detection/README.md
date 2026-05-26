@@ -76,7 +76,7 @@ Splunk Enterprise SIEM
 | Tool | Purpose |
 |---|---|
 | **CrackMapExec** | SMB authentication & remote execution |
-| **Impacket** | Remote execution & lateral movement |
+| **Impacket-PsExec** | Remote execution & lateral movement |
 | **Hydra** | Brute force testing |
 | **Nmap** | Service enumeration |
 | **FreeRDP** | RDP ports testing |
@@ -570,44 +570,86 @@ This detection identifies a common attacker pattern:
 
 Correlating failed and successful authentication events is a powerful technique for detecting credential attacks.
 
----
 
-#### Threat Hunting Examples
+### Step 11 — Splunk Alert Creation for SMB Lateral Movement Detection
 
-Additional threat hunting searches were used to investigate attacker behavior across the environment.
-
-#### Hunt PowerShell Abuse
+After validating the detection logic for suspicious SMB-based remote execution, a dedicated Splunk alert was created to automatically detect potential lateral movement activity associated with tools such as:
 
 ```sql
-index=* EventCode=1 Image="*powershell.exe"
-```
+Impacket PsExec
+CrackMapExec
+SMBExec
+PsExec-style ransomware behavior
+```sql
 
----
+**The alert correlates:**
 
-#### Hunt Encoded Commands
+- Successful SMB authentication (`Event ID 4624`)
+- NTLM network logons
+- Suspicious process execution
+- `services.exe` spawning unexpected executables
+
+**Detection Logic**
 
 ```sql
-index=* EventCode=1 CommandLine="*-enc*"
+The following SPL query was used:
+index=* (
+(EventCode=4624 Logon_Type=3 Authentication_Package=NTLM)
+OR EventCode=1
+)
+| transaction host maxspan=2m
+| search ParentImage="*services.exe"
+
+Image="C:\\Windows\\*.exe"
+
+NOT Image IN (
+"C:\\Windows\\System32\\svchost.exe",
+"C:\\Windows\\System32\\dllhost.exe"
+)
+
+| eval severity="high"
+| eval technique="T1021.002 - SMB Admin Shares"
+| eval detection="Potential Lateral Movement"
+
+| table _time host User Account_Name Source_Network_Address ParentImage Image CommandLine
+| sort - _time
 ```
+
+**Splunk Alert Configuration**
+
+The detection query was converted into a scheduled Splunk alert configured to trigger whenever suspicious SMB service execution telemetry is detected.
+
+**Configuration used:**
+
+- Alert Type: `Scheduled`
+- Severity: `High`
+- Trigger Condition: `Number of Results > 0`
+- Trigger Mode: `Per Result`
+- MITRE ATT&CK Mapping: `T1021.002 – SMB/Windows Admin Shares`
+
+### Step 12 — Alert Trigger Validation
+
+After the alert was configured, **SMB-based** remote command execution was launched from the Kali Linux attacker machine using **CrackMapExec** and **Impacket-style** execution techniques.
+
+The alert successfully triggered inside Splunk after detecting:
+
+- NTLM authentication activity
+- Remote service execution
+- Suspicious executable spawning from services.exe
+- SMB lateral movement artifacts
+- Source attacker IP visibility
+  
+![alert-triggered](screenshots/alert-triggered.png)
+
+### Step 13 — Detection Investigation and Process Chain Analysis
+
+The triggered event was investigated further inside Splunk to analyze the process execution chain generated during the attack simulation.
+
+Telemetry revealed a **suspicious parent-child process** relationship:
+
+![alert-triggered-detailed](screenshots/alert-triggered-detailed.png)
 
 ---
-
-#### Hunt Lateral Movement
-
-```sql
-index=* EventCode=1 ParentImage="*services.exe"
-```
-
----
-
-#### Hunt Suspicious Parent-Child Chains
-
-```sql
-index=* EventCode=1
-(Image="*powershell.exe" OR Image="*cmd.exe")
-| stats count by ParentImage Image
-| sort - count
-```
 
 **Why This Matters**
 
