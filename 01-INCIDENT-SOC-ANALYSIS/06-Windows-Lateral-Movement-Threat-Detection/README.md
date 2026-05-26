@@ -3,6 +3,8 @@
 
 ---
 
+![splunk-dash](screenshots/splunk-dash.png)
+
 # 📌 Project Overview
 
 **This lab simulates a realistic Windows lateral movement intrusion inside a controlled SOC environment using Kali Linux, Windows 10, Sysmon, and Splunk Enterprise.**
