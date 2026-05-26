@@ -11,11 +11,11 @@ The objective of the project was to generate real attacker telemetry, investigat
 
 **The environment includes:**
 
-- Kali Linux as the attacker machine
-- Windows 10 as the victim workstation
-- Splunk Enterprise as the SIEM
-- Sysmon for advanced endpoint telemetry
-- Splunk Universal Forwarder for centralized log ingestion
+- **Kali Linux** as the attacker machine
+- **Windows 10** as the victim workstation
+- **Splunk Enterprise** as the SIEM
+- **Sysmon** for advanced endpoint telemetry
+- **Splunk Universal Forwarder** for centralized log ingestion
 
 **The attack simulation mirrors techniques commonly observed during::**
 
