@@ -45,18 +45,6 @@ Password Spray Attempt
 
 The Microsoft Entra sign-in logs revealed multiple failed authentication attempts occurring within a short timeframe against several accounts.
 
-### Sign-In Log Review
-
-![password-spray-failures](screenshots/password-spray-failures.png)
-
-### Authentication Failure Analysis
-
-![password-spray-failures-1](screenshots/password-spray-failures-1.png)
-
-### User Activity Investigation
-
-![password-spray-failures-2](screenshots/password-spray-failures-2.png)
-
 ---
 
 # Investigation Process
@@ -64,6 +52,8 @@ The Microsoft Entra sign-in logs revealed multiple failed authentication attempt
 ## Step 1 - Review Authentication Activity
 
 Authentication logs were reviewed to identify unusual sign-in patterns and determine whether multiple users were being targeted simultaneously.
+
+![password-spray-failures](screenshots/password-spray-failures.png)
 
 ### Analysis Focus
 
@@ -78,6 +68,8 @@ Authentication logs were reviewed to identify unusual sign-in patterns and deter
 ## Step 2 - Identify Attack Indicators
 
 Several indicators consistent with password spraying activity were identified.
+
+![password-spray-failures-1](screenshots/password-spray-failures-1.png)
 
 ### Indicators Observed
 
@@ -95,6 +87,8 @@ These indicators align with known password spray attack behavior commonly observ
 ## Step 3 - Validate Authentication Results
 
 Authentication events were reviewed to determine whether any account compromise occurred.
+
+![password-spray-failures-2](screenshots/password-spray-failures-2.png)
 
 ### Findings
 
