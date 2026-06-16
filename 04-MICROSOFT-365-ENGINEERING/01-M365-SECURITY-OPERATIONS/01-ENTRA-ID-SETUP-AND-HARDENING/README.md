@@ -90,19 +90,29 @@ Strengthen identity security using Microsoft Entra Conditional Access.
 - Targeted MFA Required Group
 - Enforced MFA for standard users
 
+![mfa-successful-login](screenshots/mfa-successful-login.png)
+
 ### Require MFA For Administrators
 
 - Targeted Global Administrators
 - Enforced MFA for privileged accounts
+
+![conditional-access-admin-mfa](screenshots/conditional-access-admin-mfa.png)
 
 ### Block Legacy Authentication
 
 - Blocked Exchange ActiveSync
 - Blocked legacy authentication protocols
 
+![block-legacy-authentication](screenshots/block-legacy-authentication.png)
+
 ### Require MFA For Finance Users
 
 - Added additional protection for high-value users
+
+![mfa-for-finance-users](screenshots/mfa-for-finance-users.png)
+
+![conditional-access-policies](screenshots/conditional-access-policies.png)
 
 ## Security Benefits
 
@@ -110,9 +120,3 @@ Strengthen identity security using Microsoft Entra Conditional Access.
 - Protected privileged accounts
 - Eliminated legacy authentication attack paths
 - Strengthened identity security posture
-
-## Evidence
-
-- conditional-access-policies.png
-- admin-mfa-policy-details.png
-- legacy-auth-policy-details.png
