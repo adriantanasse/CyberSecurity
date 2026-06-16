@@ -1,5 +1,6 @@
-# Windows Lateral Movement & Threat Detection Lab
-## Splunk + Sysmon + Kali Linux SOC Detection Project
+# ⚔️ Windows AD Attack & Lateral Movement 
+## 🛡️ Threat Detection Lab
+## 🔵 Splunk + Sysmon + Kali Linux SOC Detection Project
 
 ---
 
