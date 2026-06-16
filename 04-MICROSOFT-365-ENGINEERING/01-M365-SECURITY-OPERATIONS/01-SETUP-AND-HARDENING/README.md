@@ -14,6 +14,8 @@ TancoMedia
 | Jennifer Spielberg | HR | HR Talent Recruiter |
 | Michael Johnston | Finance | Financial Analyst |
 
+![users-created](screenshots/users-created.png)
+
 ## Security Groups
 
 | Group |
