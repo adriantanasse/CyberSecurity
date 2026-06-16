@@ -34,11 +34,7 @@ TancoMedia
 - Members assigned
 - Microsoft 365 licensing verified
 
-## Screenshots
-
-- users-created.png
-- groups-created.png
-- license-assigned.png
+![license-assigned](screenshots/license-assigned.png)
 
 # Phase 2 - Multi-Factor Authentication
 
@@ -49,6 +45,10 @@ Protect user accounts using Conditional Access and MFA.
 ## Policy Created
 
 Require MFA For Employees
+
+![mfa-policy-created](screenshots/mfa-policy-created.png)
+
+![mfa-policy-created-2](screenshots/mfa-policy-created-2.png)
 
 ## Scope
 
@@ -68,6 +68,10 @@ Microsoft Authenticator
 - MFA challenge successful
 - Conditional Access policy applied
 - Sign-in logs verified
+
+![mfa-successful-login](screenshots/mfa-successful-login.png)
+
+![mfa-successful-login-2](screenshots/mfa-successful-login-2.png)
 
 ## Security Benefit
 
