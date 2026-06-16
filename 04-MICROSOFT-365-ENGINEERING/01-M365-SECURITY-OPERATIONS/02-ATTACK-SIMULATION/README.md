@@ -26,24 +26,26 @@ The attack generated authentication failures across several users to create real
 
 ## Detection Source
 
-Microsoft Entra ID Sign-In Logs
+`Microsoft Entra ID Sign-In Logs`
 
-## Alert Type
+## ⚔️ Alert Type
 
-Password Spray Attempt
+**Password Spray Attempt**
 
 ## Targeted Users
 
-- Brenda Smith
-- Daniel Ezaru
-- Gerard Miller
-- Jennifer Spielberg
+```
+Brenda Smith
+Daniel Ezaru
+Gerard Miller
+Jennifer Spielberg
+```
 
 ---
 
 ## Initial Evidence
 
-The Microsoft Entra sign-in logs revealed multiple failed authentication attempts occurring within a short timeframe against several accounts.
+The Microsoft Entra sign-in logs revealed **multiple failed authentication attempts** occurring within a short timeframe against several accounts.
 
 ---
 
@@ -92,19 +94,19 @@ Authentication events were reviewed to determine whether any account compromise 
 
 ### Findings
 
-- No successful authentications observed
-- No MFA challenges completed
-- No privilege escalation activity detected
-- No suspicious administrative actions observed
-- No evidence of account takeover
+✔️ No successful authentications observed
+✔️ No MFA challenges completed
+✔️ No privilege escalation activity detected
+✔️ No suspicious administrative actions observed
+✔️ No evidence of account takeover
 
 ---
 
 # Investigation Findings
 
-The investigation determined that the activity was consistent with a password spray attack targeting multiple user accounts.
+The investigation determined that the activity was consistent with **a password spray attack targeting multiple user accounts**.
 
-The attacker attempted to authenticate against several accounts using invalid credentials.
+The attacker attempted to authenticate against several accounts using **invalid credentials**.
 
 Microsoft Entra ID successfully recorded and logged all authentication failures, providing visibility into the attack pattern.
 
@@ -116,10 +118,10 @@ The attack relied on password-based authentication attempts against multiple use
 
 However, security controls implemented during earlier phases significantly reduced risk:
 
-- Multi-Factor Authentication (MFA)
-- Conditional Access Policies
-- Administrative MFA Enforcement
-- Identity Monitoring
+✔️ Multi-Factor Authentication (MFA)
+✔️ Conditional Access Policies
+✔️ Administrative MFA Enforcement
+✔️ Identity Monitoring
 
 These controls prevented the attack from resulting in account compromise.
 
@@ -129,19 +131,19 @@ These controls prevented the attack from resulting in account compromise.
 
 ## Business Impact
 
-No impact identified.
+✅ No impact identified.
 
 ## Data Exposure
 
-No evidence of unauthorized access.
+✅ No evidence of unauthorized access.
 
 ## Account Compromise
 
-No accounts were compromised.
+✅ No accounts were compromised.
 
 ## Service Availability
 
-No disruption to services.
+✅ No disruption to services.
 
 ---
 
@@ -221,11 +223,13 @@ No successful authentications occurred, and no accounts were compromised.
 
 ## Affected Accounts
 
-- Brenda Smith
-- Daniel Ezaru
-- Gerard Miller
-- Jennifer Spielberg
-- Michael Johnston
+```
+Brenda Smith
+Daniel Ezaru
+Gerard Miller
+Jennifer Spielberg
+Michael Johnston
+```
 
 ---
 
@@ -233,7 +237,7 @@ No successful authentications occurred, and no accounts were compromised.
 
 The investigation confirmed multiple failed authentication attempts consistent with password spray activity.
 
-No successful login attempts were identified.
+✅ No successful login attempts were identified.
 
 Conditional Access policies and MFA protections remained effective throughout the attack simulation.
 
@@ -241,7 +245,7 @@ Conditional Access policies and MFA protections remained effective throughout th
 
 ## Remediation
 
-No remediation actions were required due to the absence of successful authentication attempts.
+✅ No remediation actions were required due to the absence of successful authentication attempts.
 
 Existing security controls functioned as expected.
 
