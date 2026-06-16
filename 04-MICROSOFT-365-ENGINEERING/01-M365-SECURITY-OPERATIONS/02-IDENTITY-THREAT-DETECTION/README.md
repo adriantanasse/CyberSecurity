@@ -1,4 +1,4 @@
-# ⚔️ Password Spray Attack Detection & Investigation
+# ⚔️ ENTRA ID Password Spray Attack Detection & Investigation
 
 ## 📌 Project Objective
 
