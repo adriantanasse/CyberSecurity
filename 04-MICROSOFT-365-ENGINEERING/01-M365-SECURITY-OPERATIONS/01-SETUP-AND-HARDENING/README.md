@@ -25,6 +25,8 @@ TancoMedia
 | Finance |
 | MFA Required |
 
+![groups-created](screenshots/groups-created.png)
+
 ## Validation
 
 - Users successfully created
