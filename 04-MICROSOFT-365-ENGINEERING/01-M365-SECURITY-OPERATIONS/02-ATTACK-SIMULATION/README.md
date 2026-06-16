@@ -1,8 +1,8 @@
-# Password Spray Attack Detection & Investigation
+# ⚔️ Password Spray Attack Detection & Investigation
 
-## Project Objective
+## 📌 Project Objective
 
-The objective of this phase was to simulate and investigate a password spray attack against a Microsoft Entra ID environment.
+The objective of this phase was to simulate and investigate a password spray attack against a **Microsoft Entra ID environment**.
 
 Password spraying is a common identity-based attack technique where an attacker attempts a small number of commonly used passwords across multiple user accounts. This method helps attackers avoid account lockouts while increasing the likelihood of finding weak credentials.
 
@@ -18,9 +18,9 @@ This exercise demonstrates the ability to:
 
 # Attack Scenario
 
-A simulated password spray attack was conducted against multiple user accounts within the TancoMedia Microsoft 365 environment.
+A simulated password spray attack was conducted against multiple user accounts within the **TancoMedia Microsoft 365 environment**.
 
-The attack generated authentication failures across several users to create realistic log activity for analysis and investigation.
+The attack generated **authentication failures** across several users to create realistic log activity for analysis and investigation.
 
 ---
 
@@ -237,7 +237,7 @@ Michael Johnston
 
 The investigation confirmed multiple failed authentication attempts consistent with password spray activity.
 
-✅ No successful login attempts were identified.
+✅ **No successful login attempts were identified.**
 
 Conditional Access policies and MFA protections remained effective throughout the attack simulation.
 
@@ -245,7 +245,7 @@ Conditional Access policies and MFA protections remained effective throughout th
 
 ## Remediation
 
-✅ No remediation actions were required due to the absence of successful authentication attempts.
+✅ **No remediation actions were required due to the absence of successful authentication attempts.**
 
 Existing security controls functioned as expected.
 
