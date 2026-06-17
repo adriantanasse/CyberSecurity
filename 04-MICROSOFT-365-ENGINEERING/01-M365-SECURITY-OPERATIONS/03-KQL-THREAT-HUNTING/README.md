@@ -112,7 +112,7 @@ Identify:
 
 ### Result
 
-Both Multi-Factor Authentication and Single-Factor Authentication events were observed.
+✅ Both Multi-Factor Authentication and Single-Factor Authentication events were observed.
 
 ![MFA Analysis Query](screenshots/mfa-analysis-query.png)
 
@@ -176,7 +176,7 @@ Detect:
 
 ### Result
 
-One IP address generated 9 failed login attempts, indicating suspicious authentication activity.
+✅ One IP address generated 9 failed login attempts, indicating suspicious authentication activity.
 
 ![Password Spray Query](screenshots/password-spray-query.png)
 

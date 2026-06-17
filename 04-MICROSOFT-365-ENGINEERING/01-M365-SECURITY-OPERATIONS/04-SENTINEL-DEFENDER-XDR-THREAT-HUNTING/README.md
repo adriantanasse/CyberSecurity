@@ -2,14 +2,10 @@
 # 🔎 Microsoft Sentinel & Microsoft Defender XDR Threat Hunting
 
 ## Objective
-👉🏻 Deploy **Microsoft Sentinel** 
-
-👉🏻 Validate log ingestion 
-
-👉🏻 Perform threat hunting in **Defender XDR** 
-
-👉🏻 Create custom detection rules, generate incidents 
-
+👉🏻 Deploy **Microsoft Sentinel** <br>
+👉🏻 Validate log ingestion <br>
+👉🏻 Perform threat hunting in **Defender XDR** <br>
+👉🏻 Create custom detection rules, generate incidents <br>
 👉🏻 Investigate alerts using the unified Microsoft security stack.
 
 ---
@@ -98,9 +94,9 @@ SigninLogs
 ![Detection Rules](screenshots/detection-rules.png)
 
 **Outcome**
-✅ Alerts generated successfully.
-✅ User entities mapped using `UserPrincipalName`.
-✅ Related IP evidence attached to incidents.
+✅ Alerts generated successfully.<br>
+✅ User entities mapped using `UserPrincipalName`.<br>
+✅ Related IP evidence attached to incidents.<br>
 ✅ Incidents automatically grouped by affected account.
 
 ---
@@ -134,9 +130,9 @@ SigninLogs
 ![Password Spray Rule](screenshots/password-spraying-rule.png)
 
 **Outcome**
-✅ Password spraying activity successfully detected.
-✅ Source IP surfaced as investigation evidence.
-✅ Failed attempt counts exposed through custom details.
+✅ Password spraying activity successfully detected.<br>
+✅ Source IP surfaced as investigation evidence.<br>
+✅ Failed attempt counts exposed through custom details.<br>
 ✅ Alerts mapped to `ATT&CK` credential access techniques.
 
 ---
@@ -175,24 +171,15 @@ The following actions were performed:
 
 ### Completed Objectives
 
-✅ Microsoft Sentinel deployed successfully
-
-✅ Azure AD Sign-in logs ingested
-
-✅ Defender XDR Advanced Hunting operational
-
-✅ Threat hunting performed using KQL
-
-✅ Multiple Failed Sign-ins detection implemented
-
-✅ Password Spray detection implemented
-
-✅ Automated alert generation validated
-
-✅ Incident creation validated
-
-✅ MITRE ATT&CK mappings configured
-
+✅ Microsoft Sentinel deployed successfully<br>
+✅ Azure AD Sign-in logs ingested<br>
+✅ Defender XDR Advanced Hunting operational<br>
+✅ Threat hunting performed using KQL<br>
+✅ Multiple Failed Sign-ins detection implemented<br>
+✅ Password Spray detection implemented<br>
+✅ Automated alert generation validated<br>
+✅ Incident creation validated<br>
+✅ MITRE ATT&CK mappings configured<br>
 ✅ Investigation workflow completed
 
 ---
