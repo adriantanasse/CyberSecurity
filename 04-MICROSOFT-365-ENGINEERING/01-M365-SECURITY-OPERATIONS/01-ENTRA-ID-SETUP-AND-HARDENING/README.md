@@ -103,9 +103,9 @@ Microsoft 365 Business Premium licensing was assigned and verified to **enable a
 
 ### Validation
 
-✅ Users successfully created
-✅ Security groups created
-✅ Members assigned
+✅ Users successfully created<br>
+✅ Security groups created<br>
+✅ Members assigned<br>
 ✅ Microsoft 365 licensing verified
 
 ---
@@ -146,12 +146,12 @@ Emergency Administrator account.
 
 Authentication testing confirmed that users were required to complete MFA before gaining access.
 
-✅ MFA enrollment completed
-✅ MFA challenge successful
-✅ Conditional Access policy applied
+✅ MFA enrollment completed<br>
+✅ MFA challenge successful<br>
+✅ Conditional Access policy applied<br>
 ✅ Sign-in logs verified
 
-![mfa-successful-login](screenshots/mfa-successful-login.png)
+![mfa-successful-login](screenshots/mfa-successful-login-1.png)
 
 ![mfa-successful-login-2](screenshots/mfa-successful-login-2.png)
 
@@ -188,10 +188,10 @@ This policy enforces MFA for standard employee accounts.
 
 **Controls Implemented**
 
-🛡️ Targeted MFA Required security group
+🛡️ Targeted MFA Required security group<br>
 🛡️ MFA required during authentication
 
-![mfa-successful-login](screenshots/mfa-successful-login.png)
+![mfa-successful-login](screenshots/mfa-successful-login-1.png)
 
 ---
 
@@ -203,7 +203,7 @@ This policy ensures privileged users are protected with stronger authentication 
 
 **Controls Implemented**
 
-🛡️ Targeted Global Administrator accounts
+🛡️ Targeted Global Administrator accounts<br>
 🛡️ Required MFA before access is granted
 
 ![conditional-access-admin-mfa](screenshots/conditional-access-admin-mfa.png)
@@ -216,8 +216,8 @@ Legacy authentication protocols do not support modern security controls such as 
 
 **Controls Implemented**
 
-🛡️ Blocked Exchange ActiveSync
-🛡️ Blocked legacy authentication protocols
+🛡️ Blocked Exchange ActiveSync<br>
+🛡️ Blocked legacy authentication protocols<br>
 🛡️ Reduced attack surface
 
 ![block-legacy-authentication](screenshots/block-legacy-authentication.png)
@@ -232,7 +232,7 @@ An additional Conditional Access policy was created to provide enhanced protecti
 
 **Controls Implemented**
 
-🛡️ Targeted Finance group
+🛡️ Targeted Finance group<br>
 🛡️ Required MFA before access
 
 ![mfa-for-finance-users](screenshots/mfa-for-finance-users.png)
