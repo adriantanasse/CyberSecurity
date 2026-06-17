@@ -8,14 +8,12 @@ The lab focuses on:
 
 - Microsoft Entra ID administration
 - Conditional Access
-- Multi-Factor Authentication (MFA)
+- Multi-Factor Authentication (`MFA`)
 - Identity protection
 - Authentication monitoring
 - Password spray attack investigation
 - Security Operations Center (SOC) workflows
 - Microsoft Sentinel integration
-
-This project was built as part of my cybersecurity and IT support portfolio to demonstrate practical experience securing Microsoft 365 environments.
 
 ---
 
@@ -27,9 +25,11 @@ This project was built as part of my cybersecurity and IT support portfolio to d
 
 ### Departments
 
+```
 - IT Support
 - Human Resources (HR)
 - Finance
+```
 
 ### Security Goals
 
@@ -56,7 +56,7 @@ A small business structure was created with multiple departments, users, and sec
 
 ## Company
 
-TancoMedia
+`TancoMedia`
 
 ---
 
@@ -64,11 +64,11 @@ TancoMedia
 
 | User | Department | Role |
 |--------|------------|--------|
-| Brenda Smith | IT Support | IT Support Engineer |
-| Daniel Ezaru | IT Support | IT Support Manager |
-| Gerard Miller | HR | HR Manager |
-| Jennifer Spielberg | HR | HR Talent Recruiter |
-| Michael Johnston | Finance | Financial Analyst |
+| **Brenda Smith** | IT Support | IT Support Engineer |
+| **Daniel Ezaru** | IT Support | IT Support Manager |
+| **Gerard Miller** | HR | HR Manager |
+| **Jennifer Spielberg** | HR | HR Talent Recruiter |
+| **Michael Johnston** | Finance | Financial Analyst |
 
 ![users-created](screenshots/users-created.png)
 
@@ -97,16 +97,16 @@ Security groups simplify administration and allow Conditional Access policies to
 
 ## Licensing Validation
 
-Microsoft 365 Business Premium licensing was assigned and verified to enable advanced security capabilities such as Conditional Access and Microsoft Defender.
+Microsoft 365 Business Premium licensing was assigned and verified to **enable advanced security capabilities** such as **Conditional Access and Microsoft Defender**.
 
 ![license-assigned](screenshots/license-assigned.png)
 
 ### Validation
 
-- Users successfully created
-- Security groups created
-- Members assigned
-- Microsoft 365 licensing verified
+✅ Users successfully created
+✅ Security groups created
+✅ Members assigned
+✅ Microsoft 365 licensing verified
 
 ---
 
@@ -114,9 +114,9 @@ Microsoft 365 Business Premium licensing was assigned and verified to enable adv
 
 ## Objective
 
-Multi-Factor Authentication (MFA) was implemented to reduce the risk of unauthorized access resulting from compromised passwords.
+Multi-Factor Authentication (`MFA`) was implemented to reduce the risk of unauthorized access resulting from compromised passwords.
 
-MFA requires users to provide an additional verification factor beyond their password, significantly improving account security.
+`MFA` requires users to provide an additional verification factor beyond their password, significantly improving account security.
 
 ---
 
@@ -138,7 +138,7 @@ Emergency Administrator account.
 
 ### Authentication Method
 
-Microsoft Authenticator
+**Microsoft Authenticator**
 
 ---
 
@@ -146,10 +146,10 @@ Microsoft Authenticator
 
 Authentication testing confirmed that users were required to complete MFA before gaining access.
 
-- MFA enrollment completed
-- MFA challenge successful
-- Conditional Access policy applied
-- Sign-in logs verified
+✅ MFA enrollment completed
+✅ MFA challenge successful
+✅ Conditional Access policy applied
+✅ Sign-in logs verified
 
 ![mfa-successful-login](screenshots/mfa-successful-login.png)
 
@@ -174,7 +174,7 @@ According to Microsoft, MFA can prevent the vast majority of password-based acco
 
 ## Objective
 
-Conditional Access policies were implemented to strengthen identity security and enforce Zero Trust security principles.
+Conditional Access policies were implemented to strengthen identity security and enforce **Zero Trust security principles**.
 
 Conditional Access evaluates authentication requests and determines whether access should be granted, blocked, or require additional verification.
 
@@ -188,8 +188,8 @@ This policy enforces MFA for standard employee accounts.
 
 **Controls Implemented**
 
-- Targeted MFA Required security group
-- MFA required during authentication
+🛡️ Targeted MFA Required security group
+🛡️ MFA required during authentication
 
 ![mfa-successful-login](screenshots/mfa-successful-login.png)
 
@@ -203,8 +203,8 @@ This policy ensures privileged users are protected with stronger authentication 
 
 **Controls Implemented**
 
-- Targeted Global Administrator accounts
-- Required MFA before access is granted
+🛡️ Targeted Global Administrator accounts
+🛡️ Required MFA before access is granted
 
 ![conditional-access-admin-mfa](screenshots/conditional-access-admin-mfa.png)
 
@@ -216,9 +216,9 @@ Legacy authentication protocols do not support modern security controls such as 
 
 **Controls Implemented**
 
-- Blocked Exchange ActiveSync
-- Blocked legacy authentication protocols
-- Reduced attack surface
+🛡️ Blocked Exchange ActiveSync
+🛡️ Blocked legacy authentication protocols
+🛡️ Reduced attack surface
 
 ![block-legacy-authentication](screenshots/block-legacy-authentication.png)
 
@@ -232,8 +232,8 @@ An additional Conditional Access policy was created to provide enhanced protecti
 
 **Controls Implemented**
 
-- Targeted Finance group
-- Required MFA before access
+🛡️ Targeted Finance group
+🛡️ Required MFA before access
 
 ![mfa-for-finance-users](screenshots/mfa-for-finance-users.png)
 
@@ -253,19 +253,19 @@ The implemented controls provide several security advantages:
 
 ### Reduced Credential Theft Risk
 
-Compromised passwords alone are insufficient to access protected resources.
+👉🏻 Compromised passwords alone are insufficient to access protected resources.
 
 ### Protection of Privileged Accounts
 
-Administrative accounts require stronger authentication controls.
+👉🏻 Administrative accounts require stronger authentication controls.
 
 ### Elimination of Legacy Authentication
 
-Older protocols that bypass MFA protections have been disabled.
+👉🏻 Older protocols that bypass MFA protections have been disabled.
 
 ### Improved Identity Security Posture
 
-Access decisions are now based on modern identity security principles and risk reduction strategies.
+👉🏻 Access decisions are now based on modern identity security principles and risk reduction strategies.
 
 ---
 
