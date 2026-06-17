@@ -1,12 +1,12 @@
 
-# Phase 5 – Microsoft Sentinel & Microsoft Defender XDR
+# 🔎 Microsoft Sentinel & Microsoft Defender XDR Threat Hunting
 
 ## Objective
-Deploy Microsoft Sentinel, validate log ingestion, perform threat hunting in Defender XDR, create custom detection rules, generate incidents, and investigate alerts using the unified Microsoft security stack.
+Deploy **Microsoft Sentinel**, validate log ingestion, perform threat hunting in **Defender XDR**, create custom detection rules, generate incidents, and investigate alerts using the unified Microsoft security stack.
 
 ---
 
-## 5.1 Microsoft Sentinel Deployment
+## 1 Microsoft Sentinel Deployment
 
 Microsoft Sentinel was successfully deployed and connected to the Log Analytics workspace (**m365-soc-lab**).
 
@@ -21,21 +21,21 @@ Microsoft Sentinel was successfully deployed and connected to the Log Analytics 
 
 ---
 
-## 5.2 Log Ingestion Validation
+## 2 Log Ingestion Validation
 
-After enabling Microsoft Sentinel, Azure AD Sign-in logs were successfully ingested into the Log Analytics workspace.
+After enabling **Microsoft Sentinel**, **Azure AD Sign-in logs** were successfully ingested into the Log Analytics workspace.
 
 ### Evidence
 ![Log Ingestion Validation](screenshots/log-ingestion-sentinel.png)
 
 **Validation**
-- SigninLogs table populated.
-- Authentication events visible in Sentinel.
+- `SigninLogs` table populated.
+- Authentication events visible in **Sentinel**.
 - Failed sign-in events available for detection engineering and threat hunting.
 
 ---
 
-## 5.3 Defender XDR Threat Hunting
+## 3 Defender XDR Threat Hunting
 
 Advanced Hunting was used to identify failed authentication activity across user accounts.
 
@@ -59,9 +59,9 @@ SigninLogs
 
 ---
 
-## 5.4 Custom Detection Rule – Multiple Failed Sign-ins
+## 4 Custom Detection Rule – Multiple Failed Sign-ins
 
-A Defender XDR custom detection rule was created to identify users experiencing repeated failed authentication attempts.
+A **Defender XDR custom detection rule** was created to identify users experiencing repeated failed authentication attempts.
 
 ### Detection Logic
 
@@ -74,12 +74,12 @@ SigninLogs
 
 ### Configuration
 
-- Rule Name: Multiple Failed Sign-ins
-- Severity: High
-- Category: Credential Access
-- MITRE ATT&CK: T1110 Brute Force
-- Frequency: Every 5 minutes
-- Lookback Period: 1 hour
+- Rule Name: `Multiple Failed Sign-ins`
+- Severity: `High`
+- Category: `Credential Access`
+- MITRE ATT&CK: `T1110 Brute Force`
+- Frequency: `Every 5 minutes`
+- Lookback Period: `1 hour`
 
 ### Evidence
 
@@ -90,14 +90,14 @@ SigninLogs
 ![Detection Rules](screenshots/detection-rules.png)
 
 **Outcome**
-- Alerts generated successfully.
-- User entities mapped using UserPrincipalName.
-- Related IP evidence attached to incidents.
-- Incidents automatically grouped by affected account.
+✅ Alerts generated successfully.
+✅ User entities mapped using `UserPrincipalName`.
+✅ Related IP evidence attached to incidents.
+✅ Incidents automatically grouped by affected account.
 
 ---
 
-## 5.5 Custom Detection Rule – Password Spray Detection
+## 5 Custom Detection Rule – Password Spray Detection
 
 A second detection rule was created to identify password spraying behavior originating from a single IP address targeting multiple accounts.
 
@@ -115,27 +115,27 @@ SigninLogs
 
 ### Configuration
 
-- Rule Name: Password Spray Detection
-- Severity: Medium
-- Category: Credential Access
-- MITRE ATT&CK: T1110.003 Password Spraying
-- Frequency: Every 5 minutes
-- Lookback Period: 1 hour
+- Rule Name: `Password Spray Detection`
+- Severity: `Medium`
+- Category: `Credential Access`
+- MITRE ATT&CK: `T1110.003 Password Spraying`
+- Frequency: `Every 5 minutes`
+- Lookback Period: `1 hour`
 
 ### Evidence
 ![Password Spray Rule](screenshots/password-spraying-rule.png)
 
 **Outcome**
-- Password spraying activity successfully detected.
-- Source IP surfaced as investigation evidence.
-- Failed attempt counts exposed through custom details.
-- Alerts mapped to ATT&CK credential access techniques.
+✅ Password spraying activity successfully detected.
+✅ Source IP surfaced as investigation evidence.
+✅ Failed attempt counts exposed through custom details.
+✅ Alerts mapped to `ATT&CK` credential access techniques.
 
 ---
 
-## 5.6 Incident Generation & Investigation
+## 6 Incident Generation & Investigation
 
-Custom detections successfully generated incidents within Defender XDR.
+Custom detections successfully generated incidents within **Defender XDR**.
 
 ### Evidence
 ![Incident Investigation](screenshots/incident-investigation.png)
@@ -163,7 +163,7 @@ The following actions were performed:
 
 ---
 
-## 5.7 Phase 5 Outcomes
+## 7 Outcomes
 
 ### Completed Objectives
 
@@ -191,4 +191,4 @@ The following actions were performed:
 
 ## Conclusion
 
-Phase 5 successfully demonstrated end-to-end detection engineering and incident response capabilities using Microsoft Sentinel and Microsoft Defender XDR. Log ingestion, threat hunting, custom detections, alert generation, incident correlation, and investigation workflows were validated, providing operational security monitoring coverage for credential access threats including brute force and password spraying attacks.
+We successfully demonstrated end-to-end detection engineering and incident response capabilities using Microsoft Sentinel and Microsoft Defender XDR. Log ingestion, threat hunting, custom detections, alert generation, incident correlation, and investigation workflows were validated, providing operational security monitoring coverage for credential access threats including brute force and password spraying attacks.
