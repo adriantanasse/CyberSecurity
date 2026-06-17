@@ -2,7 +2,15 @@
 # 🔎 Microsoft Sentinel & Microsoft Defender XDR Threat Hunting
 
 ## Objective
-Deploy **Microsoft Sentinel**, validate log ingestion, perform threat hunting in **Defender XDR**, create custom detection rules, generate incidents, and investigate alerts using the unified Microsoft security stack.
+👉🏻 Deploy **Microsoft Sentinel** 
+
+👉🏻 Validate log ingestion 
+
+👉🏻 Perform threat hunting in **Defender XDR** 
+
+👉🏻 Create custom detection rules, generate incidents 
+
+👉🏻 Investigate alerts using the unified Microsoft security stack.
 
 ---
 
