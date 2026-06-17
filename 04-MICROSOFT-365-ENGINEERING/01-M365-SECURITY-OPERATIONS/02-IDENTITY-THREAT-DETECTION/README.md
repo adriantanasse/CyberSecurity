@@ -1,4 +1,4 @@
-# ⚔️ Password Spray Attack Detection & Investigation
+# ⚔️ ENTRA ID Password Spray Attack Detection & Investigation
 
 ## 📌 Project Objective
 
@@ -95,10 +95,16 @@ Authentication events were reviewed to determine whether any account compromise 
 ### Findings
 
 ✔️ No successful authentications observed
+
 ✔️ No MFA challenges completed
+
 ✔️ No privilege escalation activity detected
+
 ✔️ No suspicious administrative actions observed
+
 ✔️ No evidence of account takeover
+
+![failed-logins-diagnose](screenshots/failed-logins-diagnose.png)
 
 ---
 
