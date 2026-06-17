@@ -1,4 +1,4 @@
-# Phase 3 – KQL Threat Hunting with Microsoft Entra ID Logs
+# 🔎 KQL Threat Hunting with Microsoft Entra ID Logs
 
 ## Overview
 
