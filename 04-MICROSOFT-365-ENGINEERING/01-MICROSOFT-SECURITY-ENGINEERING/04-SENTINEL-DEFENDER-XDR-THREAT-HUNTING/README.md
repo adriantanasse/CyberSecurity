@@ -1,6 +1,12 @@
 
 # 🔎 Microsoft Sentinel & Microsoft Defender XDR Threat Hunting
 
+![Static Badge](https://img.shields.io/badge/KQL-content?style=flat-square&color=%230078D4)
+![Microsoft Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-blue)
+![Defender XDR](https://img.shields.io/badge/Defender-XDR-green)
+[![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#)
+[![Windows](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](#)
+
 ## Objective
 👉🏻 Deploy **Microsoft Sentinel** <br>
 👉🏻 Validate log ingestion <br>

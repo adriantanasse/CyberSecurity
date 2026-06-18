@@ -1,5 +1,11 @@
 # ⚔️ ENTRA ID Password Spray Attack Detection & Investigation
 
+![Static Badge](https://img.shields.io/badge/KQL-content?style=flat-square&color=%230078D4)
+![Microsoft Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-blue)
+![Defender XDR](https://img.shields.io/badge/Defender-XDR-green)
+[![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#)
+[![Windows](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](#)
+
 ## 📌 Project Objective
 
 The objective of this phase was to simulate and investigate a password spray attack against a **Microsoft Entra ID environment**.

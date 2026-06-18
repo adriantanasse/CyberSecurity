@@ -1,5 +1,10 @@
 # Microsoft 365 + Entra ID Security Operations Lab
 
+![Microsoft Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-blue)
+![Defender XDR](https://img.shields.io/badge/Defender-XDR-green)
+[![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#)
+[![Windows](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](#)
+
 ## Project Overview
 
 This project simulates a real-world Microsoft 365 and Microsoft Entra ID environment used by a small organization. The objective is to implement identity security controls, monitor authentication activity, investigate suspicious behavior, and demonstrate hands-on experience with Microsoft cloud security technologies.
