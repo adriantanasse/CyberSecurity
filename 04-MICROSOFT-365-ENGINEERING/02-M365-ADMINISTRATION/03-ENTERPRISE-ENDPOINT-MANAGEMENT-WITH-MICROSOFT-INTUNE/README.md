@@ -10,22 +10,6 @@ The lab simulates a real-world enterprise environment where devices are enrolled
 
 ---
 
-## 👷‍♂️ Project Architecture
-
-
-                Microsoft Entra ID
-                         |
-                         |
-                    Microsoft Intune
-                         |
-       -------------------------------------
-       |                |                  |
-   Windows 11      Security Policies   Applications
-      Device            Compliance      Deployment
-
-
----
-
 ## ⚙️ Technologies Used
 
 ✅ Microsoft Intune<br>
