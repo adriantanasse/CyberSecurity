@@ -1,5 +1,6 @@
 # 🔎 KQL Threat Hunting with Microsoft Entra ID Logs
 
+![Static Badge](https://img.shields.io/badge/KQL-content?style=flat-square&label=Microsoft&labelColor=%2357606a&color=%230078D4)
 ![Static Badge](https://img.shields.io/badge/KQL-content?style=flat-square&color=%230078D4)
 ![Microsoft Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-blue)
 ![Defender XDR](https://img.shields.io/badge/Defender-XDR-green)

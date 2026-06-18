@@ -1,5 +1,12 @@
 # Microsoft 365 Security Engineering Lab
 
+![Static Badge](https://img.shields.io/badge/KQL-content?style=flat-square&label=Microsoft&labelColor=%2357606a&color=%230078D4)
+![Microsoft Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-blue)
+![Defender XDR](https://img.shields.io/badge/Defender-XDR-green)
+[![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#)
+[![Windows](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](#)
+
+
 > A hands-on Microsoft security lab focused on identity protection, threat detection, threat hunting, incident response, and security operations using Microsoft Entra ID, Microsoft Defender XDR, Microsoft Sentinel, and KQL.
 
 This repository documents the practical implementation of Microsoft security technologies across multiple phases, simulating real-world scenarios encountered by:
