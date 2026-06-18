@@ -4,10 +4,9 @@
 ![Microsoft Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-blue)
 ![Defender XDR](https://img.shields.io/badge/Defender-XDR-green)
 [![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#)
+![KQL](https://img.shields.io/badge/KQL-content?style=plastic&label=Microsoft&labelColor=%2357606a&color=%230078D4)
 ![Splunk](https://img.shields.io/badge/Splunk-SIEM-orange)
 ![Wazuh](https://img.shields.io/badge/Wazuh-Detection-purple)
-[![Windows](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](#)
-[![Kali Linux](https://img.shields.io/badge/Kali%20Linux-557C94?logo=kalilinux&logoColor=fff)](#)
 
 
 A hands-on cybersecurity portfolio showcasing practical experience in:

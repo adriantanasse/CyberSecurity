@@ -4,7 +4,7 @@
 ![Microsoft Sentinel](https://img.shields.io/badge/Microsoft-Sentinel-blue)
 ![Defender XDR](https://img.shields.io/badge/Defender-XDR-green)
 [![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#)
-![Static Badge](https://img.shields.io/badge/KQL-content?style=flat-square&label=Microsoft&labelColor=%2357606a&color=%230078D4)
+![KQL](https://img.shields.io/badge/KQL-content?style=plastic&label=Microsoft&labelColor=%2357606a&color=%230078D4)
 [![Windows](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](#)
 
 Microsoft 365, Azure, and Identity Security projects focused on identity protection, threat detection, threat hunting, and security operations.
