@@ -44,7 +44,10 @@ A password spraying attack was launched from Kali Linux against Entra ID account
 
 ### Screenshot
 
-![Password Spray Attack](screenshots/run-attack-again.png)
+![Spraying Check](screenshots/spraying-check.png)
+
+![Spraying Successful Login](screenshots/spraying-successful-login.png)
+
 
 ---
 
@@ -54,11 +57,7 @@ Authentication activity was validated to confirm that failed sign-in events were
 
 ### Screenshot
 
-![Spraying Successful Login](screenshots/spraying-successful-login.png)
-
-### Screenshot
-
-![Spraying Check](screenshots/spraying-check.png)
+![Password Spray Attack](screenshots/run-attack-again.png)
 
 ---
 
